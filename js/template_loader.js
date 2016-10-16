@@ -1,0 +1,1 @@
+window.template_loader={updateLayout:function(template_id,template_content,template_location,update_callback){var template=twig({ref:template_id});var rendered=template.render(template_content);$(template_location).html(rendered);if(update_callback){update_callback();}}};$(document).ready(function(){BL_TEMPLATES_DEF.forEach(function(element,index,array){twig(element);});});
