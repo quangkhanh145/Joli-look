@@ -1,0 +1,331 @@
+.table-max{
+  display:table;
+  clear:both;
+  margin:0
+auto;
+  width:100%;
+  max-width:1600px}
+.promo
+img{
+  width:100%;
+  height:auto}
+.promo .promo-text{
+  width:100%}
+.promo .h1,
+.main-promo
+.h1{
+  font-weight:700;
+  font-family:"brandon-grotesque",sans-serif;
+  text-transform:uppercase}
+.main-promo
+.text{
+  font-weight:100;
+  font-family:"brandon-grotesque",sans-serif;
+  text-transform:uppercase}
+.home
+.discover{
+  border-top:1px solid #000}
+.home .discover .table-cell{
+  padding:0;
+  width:33%;
+  position:relative}
+.home .discover .table-cell
+img{
+  width:100%;
+  height:auto}
+.home .discover
+a{
+  font-family:"brandon-grotesque",sans-serif}
+.home .about-bonlook{
+  border-top:1px solid #000;
+  margin-top:40px}
+.home .front-frames .grid>*{
+  text-align:center}
+.home [class*=icon-] img{
+  width:100%;
+  height:auto}
+.promo-top{
+  position:relative;
+  top:-13%;
+  padding:0
+0 0 20%}
+.promo-bottom{
+  position:relative;
+  top:-10%;
+  padding:0
+0 0 20%}
+@media only screen and (max-width: 720px){
+  .table-cell{
+  padding:4%}
+.promo{
+  background:transparent none !important}
+.promo
+.h1{
+  font-size:4vw}
+.promo
+.h2{
+  font-size:3.5vw}
+.promo
+.text{
+  font-size:2.8vw}
+.main-promo
+.h1{
+  font-size:6vw}
+.main-promo
+.text{
+  font-size:4vw}
+.home .social-holder{
+  display:block;
+  clear:both;
+  overflow:hidden;
+  padding:8% 0}
+.home .social-holder
+.button{
+  margin:8% auto}
+.promo{
+  width:100%;
+  overflow:hidden}
+.promo
+img{
+  width:200%;
+  max-width:200%}
+.home .front-frames{
+  margin:4% 0}
+.home .front-frames .grid>*{
+  display:block;
+  width:100%;
+  padding:4% 0}
+#discover_center_block{
+  color:black !important}
+#discover_left_block{
+  color:black !important}
+.promo-top{
+  top:0;
+  padding:0}
+.promo-bottom{
+  top:0;
+  padding:0}
+}
+@media only screen and (max-width: 1024px){
+  #shop-sunglasses,#shop-eyeglasses{
+  font-size:14px !important}
+.home
+.discover{
+  position:relative;
+  padding-top:12%}
+.home .discover
+.h4{
+  position:absolute;
+  top:-3%;
+  left:50%;
+  -ms-transform:translateX(-50%);
+  -webkit-transform:translateX(-50%);
+  transform:translateX(-50%);
+  background:#fff;
+  padding:0
+2%;
+  margin:0}
+.home .about-bonlook{
+  position:relative;
+  padding:12% 0 5% 0}
+.home .about-bonlook
+.h4{
+  position:absolute;
+  top:-3%;
+  left:50%;
+  -ms-transform:translateX(-50%);
+  -webkit-transform:translateX(-50%);
+  transform:translateX(-50%);
+  background:#fff;
+  padding:0
+2%;
+  margin:0}
+.home .discover .table-cell{
+  width:49%}
+.home .discover .table-cell:first-child{
+  margin-right:2%}
+.home .discover .table-cell
+span{
+  display:block;
+  margin:4% 0 0;
+  font-size:175%;
+  font-size:3.8vw;
+  font-weight:700}
+.home .discover
+br{
+  display:none}
+.main-promo{
+  margin-top:-3px !important}
+}
+@media only screen and (min-width: 721px) and (max-width: 1024px){
+  .home .social-holder
+.h3{
+  margin:0}
+.home .social-holder
+.button{
+  margin:25px
+auto}
+.home
+.discover{
+  padding-top:40px}
+.home .about-bonlook{
+  padding-top:40px}
+.promo-top{
+  position:relative;
+  top:-1%;
+  padding:0
+0 0 20%}
+.promo-bottom{
+  position:relative;
+  top:-1%;
+  padding:0
+0 0 20%}
+}
+@media only screen and (min-width: 721px){
+  .promo .promo-text{
+  width:50%;
+  padding:0
+2%}
+.promo{
+  background-size:100%;
+  background-repeat:no-repeat;
+  background-position:center top;
+  width:100%;
+  height:29.5vw}
+.promo.front-frames{
+  margin:5vw auto;
+  height:auto}
+.promo{
+  margin-top:10px}
+.promo:first-of-type{
+  margin-top:0}
+.home .social-holder{
+  display:-webkit-flex;
+  -webkit-flex-flow:column-reverse;
+  display:-moz-flex;
+  -moz-flex-flow:column-reverse;
+  display:-ms-flexbox;
+  -ms-flex-flow:column-reverse;
+  display:flex;
+  flex-flow:column-reverse;
+  width:100%;
+  text-align:center;
+  margin:8% auto}
+.home .discover .content-holder{
+  padding-left:10px;
+  padding-right:10px}
+.home .discover .table-cell{
+  width:32.5%;
+  margin-left:1.25%}
+.home .discover .table-cell:first-child{
+  margin:0%}
+.home .discover .table-cell
+span{
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:100%;
+  margin:-5% 0 0 -50%;
+  font-size:22px;
+  color:#fff}
+.home .discover .table-cell
+br{
+  display:block}
+.home .about-bonlook .content-holder, #page_eyeglasses .about-bonlook .content-holder,
+#page_sunglasses .about-bonlook .content-holder{
+  padding-left:20px;
+  padding-right:20px;
+  line-height:25px}
+.home .front-frames ul
+li{
+  }
+}
+@media only screen and (min-width: 1025px){
+  #main{
+  position:relative;
+  top:158px;
+  z-index:1}
+.promo
+.h1{
+  font-size:40px}
+.promo .h2, .promo
+.text{
+  font-size:24px}
+.main-promo
+.h1{
+  font-size:44px}
+.main-promo
+.text{
+  font-size:27px}
+.home .social-holder{
+  margin:40px
+auto}
+.home .social-holder
+.h3{
+  margin:0
+0 20px 0;
+  font-size:30px}
+.home .social-holder
+.button{
+  margin:40px
+auto}
+.home
+.discover{
+  max-width:1600px;
+  margin:0
+auto;
+  text-align:center}
+.home .discover
+.h4{
+  display:block;
+  margin:40px
+auto;
+  padding:0;
+  font-size:28px}
+.home .discover .content-holder{
+  padding-left:30px;
+  padding-right:30px}
+.home .discover .table-cell{
+  width:30%;
+  margin-left:5%}
+.home .discover .table-cell:first-child{
+  margin:0%}
+.home .discover .table-cell
+span{
+  font-size:28px;
+  font-weight:700}
+.home .about-bonlook
+.h4{
+  display:block;
+  margin:40px
+auto;
+  padding:0;
+  font-size:28px}
+.home .about-bonlook .content-holder{
+  padding-left:50px;
+  padding-right:50px;
+  font-size:14px;
+  line-height:25px}
+.promo-top{
+  position:relative;
+  top:-5%;
+  padding:0
+0 0 28%}
+.promo-bottom{
+  position:relative;
+  top:-5%;
+  padding:0
+0 0 28%}
+}
+@media only screen and (min-width: 1700px){
+  .promo-top{
+  position:relative;
+  top:-0%;
+  padding:0
+0 0 20%}
+.promo-bottom{
+  position:relative;
+  top:-0%;
+  padding:0
+0 0 20%}
+}

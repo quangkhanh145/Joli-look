@@ -1,0 +1,245 @@
+.status-chart{
+  clear:both;
+  display:block;
+  position:relative;
+  z-index:0;
+  width:100%;
+  max-width:500px;
+  height:80px;
+  padding:0;
+  float:left;
+  margin:0
+0 20px 0}
+.status-chart
+ul{
+  list-style:none;
+  margin:0;
+  display:block;
+  clear:both;
+  width:100%;
+  float:left;
+  height:100px;
+  overflow:hidden}
+.status-chart ul
+li{
+  position:relative;
+  z-index:2;
+  float:left !important;
+  width:20%;
+  text-align:center;
+  margin:0;
+  padding:0;
+  display:inline-block;
+  font-size:12px;
+  font-weight:400;
+  background:none !important}
+.status-chart ul li
+span.index{
+  display:block;
+  clear:both;
+  margin:0
+auto;
+  width:40px !important;
+  height:40px !important;
+  overflow:hidden !important;
+  line-height:38px;
+  background:#fff url('/images/order/order_status_all.png') 50% 0px;
+  margin-bottom:12px}
+.status-chart ul li
+span.label{
+  }
+.status-chart .progress-bar{
+  position:relative;
+  z-index:1;
+  top:18px;
+  left:4px;
+  width:80%;
+  height:8px;
+  border:1px
+solid #000;
+  background-color:#fff}
+.status-chart .progress-bar
+.fill{
+  width:100%;
+  height:6px;
+  background-color:#c9c9c9}
+.status-chart.being_approved li.first
+span.index{
+  background-position:50% 40px;
+  color:#fff}
+.status-chart.being_processed li.first
+span.index{
+  background-position:50% 80px;
+  color:#fff}
+.status-chart.being_processed li.second
+span.index{
+  background-position:50% 40px;
+  color:#fff}
+.status-chart.in_transit li.first
+span.index{
+  background-position:50% 80px;
+  color:#fff}
+.status-chart.in_transit li.second
+span.index{
+  background-position:50% 80px;
+  color:#fff}
+.status-chart.in_transit li.third
+span.index{
+  background-position:50% 40px;
+  color:#fff}
+.status-chart.shipped li.first
+span.index{
+  background-position:50% 80px;
+  color:#fff}
+.status-chart.shipped li.second
+span.index{
+  background-position:50% 80px;
+  color:#fff}
+.status-chart.shipped li.third
+span.index{
+  background-position:50% 80px;
+  color:#fff}
+.status-chart.shipped li.fourth
+span.index{
+  background-position:50% 40px;
+  color:#fff}
+.status-chart.delivered li.first
+span.index{
+  background-position:50% 80px;
+  color:#fff}
+.status-chart.delivered li.second
+span.index{
+  background-position:50% 80px;
+  color:#fff}
+.status-chart.delivered li.third
+span.index{
+  background-position:50% 80px;
+  color:#fff}
+.status-chart.delivered li.fourth
+span.index{
+  background-position:50% 80px;
+  color:#fff}
+.status-chart.delivered li.last
+span.index{
+  background-position:50% 40px;
+  color:#fff}
+#pdf_content{
+  width:100%;
+  height:300px}
+@media only screen and (max-width: 720px){
+  .status-chart{
+  margin-left:0;
+  padding:0
+40px;
+  max-width:100% !important}
+.status-chart
+.mask{
+  width:166%;
+  float:left;
+  overflow:hidden}
+.status-chart ul
+li{
+  width:33%}
+.status-chart
+ul{
+  margin-left:0}
+}
+.status-order-description{
+  clear:both;
+  float:left;
+  line-height:1.5em;
+  padding:5px
+0;
+  margin-bottom:20px;
+  width:100%;
+  position:relative}
+.can-return-notification{
+  clear:both;
+  line-height:1.5em;
+  padding:5px
+0;
+  width:100%;
+  text-transform:none;
+  font-weight:100}
+.order-prescription{
+  margin-top:20px;
+  clear:both}
+.account table.w-100
+td{
+  font-size:14px;
+  padding:0
+0 0 0.5vw}
+.account table.w-100 td:first-child{
+  padding:0}
+.my_orders_return_page
+.full{
+  width:100%}
+.my_orders_return_page .form
+.error{
+  float:none;
+  padding-top:20px}
+.my_orders_return_page .form
+ul{
+  margin-top:15px}
+.my_orders_return_page .form
+fieldset{
+  padding-bottom:10px}
+.my_orders_return_page .form fieldset:nth-child(2){
+  padding-bottom:30px}
+.my_orders_return_page .form fieldset
+select{
+  margin:0
+auto;
+  width:220px;
+  display:block;
+  margin-top:-10px}
+.my_orders_return_page .form fieldset
+textarea{
+  margin:0
+auto;
+  width:220px;
+  margin-top:-10px}
+.my_orders_return_page .form
+.reason_container{
+  display:none}
+.my_orders_return_page
+.submit_container{
+  width:100%;
+  float:left;
+  margin-top:20px;
+  margin-bottom:10px}
+.my_orders_return_page input[type="checkbox"]{
+  vertical-align:middle}
+.my_orders_return_page li
+span.small{
+  font-size:12px}
+.my_orders_return_page #return-btn{
+  margin:0
+auto;
+  display:block}
+.my_orders_return_page input[type="file"]{
+  margin:0
+auto;
+  display:block;
+  margin-top:-15px}
+.text-yellow{
+  color:black;
+  font-weight:bold}
+@media only screen and (max-width: 639px){
+  .status-order-description{
+  display:block !important;
+  color:black !important;
+  background-color:transparent !important}
+}
+@media only screen and (max-width: 1024px){
+  .status-order-description{
+  margin-top:auto !important}
+}
+@media only screen and (min-width: 640px){
+  }
+@media only screen and (min-width: 721px){
+  #col-main>*{
+  max-width:900px}
+}
+@media only screen and (min-width: 1025px){
+  }

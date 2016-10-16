@@ -1,0 +1,389 @@
+.mobile_checkout{
+  overflow:hidden}
+#login-form
+.button{
+  display:block;
+  width:100%;
+  clear:both;
+  margin:4% 0 0}
+#signin-form{
+  margin-top:6vw}
+.checkout
+p{
+  margin:1em
+0}
+.checkout .max-width{
+  width:100%}
+.checkout .utlra-thin-glasses{
+  display:none}
+.checkout [class*="cc-"]:before,.logo-paypal:before{
+  background-image:url(/images/accepted-cards.png);
+  content:' ';
+  display:inline-block;
+  height:20px;
+  line-height:19px;
+  vertical-align:bottom;
+  width:40px;
+  margin-right:10px}
+.cc-visa:before{
+  background-position:0 0}
+.cc-mastercard:before{
+  background-position:-49px 0}
+.cc-americanexpress:before{
+  background-position:-88px 0;
+  width:50px !important}
+.cc-discover:before{
+  background-position:-143px 0;
+  width:60px !important}
+.cc-jcb:before{
+  background-position:-208px 0;
+  width:25px !important}
+.logo-paypal:before{
+  background-image:url(/images/logo-paypal.png);
+  height:25px;
+  width:98px;
+  margin-right:30px}
+.checkout .list-items
+li{
+  overflow:hidden}
+.checkout .list-items .cart-preview{
+  width:12%;
+  height:auto;
+  float:left}
+.checkout .list-items .cart-description{
+  width:88%;
+  float:left}
+.checkout .list-items .cart-description
+p{
+  padding:20px}
+.checkout .list-items .cart-description
+strong{
+  display:block}
+.mobile-checkout{
+  margin-bottom:50px}
+.mobile-checkout
+.cart{
+  margin-left:-4%;
+  margin-right:-4%}
+.mobile-checkout .cart .list-items
+li{
+  border:solid #ccc;
+  border-width:1px 0 0}
+.mobile-checkout .cart .list-items li:last-child{
+  border-width:1px 0}
+.mobile-checkout .content-holder>.bordered:first-child{
+  margin-top:0;
+  border-top:0}
+.disabled{
+  pointer-events:none}
+a#taxesNotice:hover{
+  text-decoration:underline}
+#displayTaxNotice{
+  display:none;
+  border:1px
+solid black;
+  width:50%;
+  float:right;
+  text-align:center;
+  padding:10px;
+  margin:10px
+0 0 0}
+#closeTaxNotice{
+  color:blue;
+  float:right;
+  font-weight:bold;
+  cursor:pointer}
+.clear{
+  clear:both}
+#breadcrumb{
+  position:absolute;
+  width:100%;
+  border-bottom:1px solid black;
+  background-color:white;
+  padding:20px;
+  text-align:center;
+  z-index:1000;
+  margin-bottom:50px}
+#breadcrumb>ul>li{
+  display:inline;
+  font:normal 14px/1 'proxima-nova', sans-serif;
+  font-size:17px;
+  margin:0
+10px 0 10px}
+#payment,#checkout-section-submit,#order-container,#checkout-join-bonlook{
+  position:relative}
+#rx_extra_choice
+li{
+  text-align:center}
+a.rx_extra_choice-more{
+  font-weight:600;
+  display:none}
+div.rx_extra_choice-details{
+  z-index:100001;
+  position:absolute;
+  background-color:white;
+  border:1px
+solid #000;
+  text-align:justify;
+  left:600px;
+  width:50%;
+  display:none}
+@media only screen and (max-width: 736px){
+  .mobile_checkout{
+  margin-top:-3px}
+#checkout-steps li>*{
+  font:normal 6vw "playfair", serif;
+  display:block;
+  padding:6%;
+  text-align:center;
+  color:#b2b2b2;
+  border:solid #b2b2b2;
+  border-width:0 0 1px}
+#checkout-steps
+a{
+  color:#000}
+#checkout-steps
+.current{
+  background:#fff url(/images/icon-next.svg) 90vw center no-repeat;
+  color:#000;
+  background-size:6vw auto;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Invert=100)";
+  -webkit-filter:invert(1);
+  filter:invert(100)}
+.checkout-step-title{
+  display:block;
+  padding:6%;
+  text-align:center;
+  font:normal 6vw "playfair", serif;
+  background:#fff url(/images/icon-back.svg) 10vw center no-repeat;
+  color:#000;
+  background-size:6vw auto;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Invert=100)";
+  -webkit-filter:invert(1);
+  filter:invert(100)}
+.checkout-step-title + .content-holder
+.bordered{
+  margin-top:0}
+.choices{
+  margin:6% 0}
+.choices
+a{
+  display:block;
+  padding:4%;
+  margin:4% 0;
+  font-size:4vw;
+  text-align:center;
+  text-transform:uppercase;
+  background:#fff url(/images/icon-next.svg) 98% center no-repeat;
+  background-size:6vw auto;
+  border:1px
+solid #b2b2b2;
+  color:#000}
+.choices a:hover,
+.choices a:active{
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Invert=100)";
+  -webkit-filter:invert(1);
+  filter:invert(100)}
+#facebook_login_btn{
+  margin-top:25px;
+  cursor:pointer;
+  background:url(/images/facebook_log_in.jpg) center center no-repeat;
+  height:53px;
+  background-size:100%}
+#facebook_login_btn:hover{
+  background:url(/images/facebook_log_in_white.jpg) center center no-repeat;
+  height:53px;
+  background-size:100%}
+.fr
+#facebook_login_btn{
+  background:url(/images/facebook_connexion.jpg) center center no-repeat;
+  background-size:contain}
+.fr #facebook_login_btn:hover{
+  background:url(/images/facebook_connexion_white.jpg) center center no-repeat;
+  background-size:contain}
+#facebook_register_btn{
+  cursor:pointer;
+  background:url(/images/facebook_register.jpg) center center no-repeat;
+  height:53px;
+  background-size:100%;
+  width:80%;
+  margin:0
+auto}
+#facebook_register_btn:hover{
+  background:url(/images/facebook_register_white.jpg) center center no-repeat;
+  background-size:100%}
+.fr
+#facebook_register_btn{
+  background:url(/images/facebook_inscription.jpg) center center no-repeat;
+  background-size:contain}
+.fr #facebook_register_btn:hover{
+  background:url(/images/facebook_inscription_white.jpg) center center no-repeat;
+  background-size:contain}
+a.rx_extra_choice-more{
+  text-align:center}
+div.rx_extra_choice-details{
+  position:inherit;
+  width:100%}
+.rx_extra_choice-details
+h3{
+  font-size:5.0vw}
+}
+@media only screen and (max-width: 1024px){
+  .box{
+  max-width:none}
+.box.mini{
+  font-size:14px;
+  margin:0;
+  width:18vw;
+  height:18vw;
+  min-width:0;
+  min-height:0;
+  max-width:none;
+  max-height:none}
+#rx_extra_choice .rx_extra_choice-details{
+  left:230px;
+  width:60%}
+}
+@media only screen and (min-width: 721px){
+  .checkout .terms-agreement{
+  max-width:650px;
+  margin:0
+auto;
+  text-align:justify;
+  line-height:130%}
+.checkout .terms-agreement
+legend{
+  text-align:center}
+.checkout .h1.text-center,
+.checkout
+.h2{
+  position:relative}
+.edit,.back{
+  font-family:"brandon-grotesque",sans-serif;
+  font-size:12px;
+  text-transform:uppercase;
+  position:absolute;
+  right:0;
+  top:50%;
+  -webkit-transform:translateY(-50%);
+  -ms-transform:translateY(-50%);
+  -o-transform:translateY(-50%);
+  transform:translateY(-50%)}
+.edit{
+  display:none}
+.h4 .edit, .h4
+.back{
+  margin-top:8px}
+#facebook_login_btn{
+  margin-top:25px;
+  cursor:pointer;
+  background:url(/images/facebook_log_in.jpg) center center no-repeat;
+  height:53px;
+  background-size:100%}
+#facebook_login_btn:hover{
+  background:url(/images/facebook_log_in_white.jpg) center center no-repeat;
+  height:53px;
+  background-size:100%}
+.fr
+#facebook_login_btn{
+  background:url(/images/facebook_connexion.jpg) center center no-repeat;
+  background-size:contain}
+.fr #facebook_login_btn:hover{
+  background:url(/images/facebook_connexion_white.jpg) center center no-repeat;
+  background-size:contain}
+#facebook_register_btn, #section-create-account
+#facebook_register_btn{
+  cursor:pointer;
+  background:url(/images/facebook_register.jpg) center center no-repeat;
+  height:53px;
+  width:78%;
+  margin:0
+auto;
+  background-size:100%}
+#section-create-account
+#facebook_register_btn{
+  width:20%}
+#facebook_register_btn:hover{
+  background:url(/images/facebook_register_white.jpg) center center no-repeat;
+  background-size:100%}
+.fr
+#facebook_register_btn{
+  background:url(/images/facebook_inscription.jpg) center center no-repeat;
+  background-size:contain}
+.fr #facebook_register_btn:hover{
+  background:url(/images/facebook_inscription_white.jpg) center center no-repeat;
+  background-size:contain}
+.login-boxes .grid>*{
+  max-width:390px}
+.boxes{
+  margin:0
+0 -1px 0}
+.boxes>*{
+  border-top:0;
+  margin-left:-1px !important}
+#credit-card-form .grid>*{
+  width:15%;
+  margin-left:1.5%}
+#credit-card-form .grid>*:first-child{
+  width:63%;
+  margin-left:0}
+.cart-description{
+  font-size:14px}
+}
+.page-checkout #main-nav,
+.page-checkout #sub-nav,
+.page-checkout #quick-clicks,
+.page-checkout #open-menu,
+.page-checkout .search-icon,
+.page-checkout .bag-icon,
+.page-checkout
+footer{
+  display:none}
+#canada-disclaimer
+div{
+  margin-top:15px}
+.error{
+  font-weight:bold;
+  font-size:14px}
+@media only screen and (max-width: 721px){
+  .page-checkout .header-holder{
+  border-bottom:1px solid #000}
+}
+@media only screen and (min-width: 721px){
+  .page-checkout
+header{
+  height:68px;
+  border-bottom:1px solid #000}
+}
+@media only screen and (min-width: 1024px){
+  .page-checkout
+header{
+  height:82px}
+.page-checkout
+#main{
+  top:82px}
+.page-checkout .left-space{
+  padding-left:20px}
+.page-checkout .right-space{
+  padding-right:20px}
+.page-checkout #checkout-section-prescription
+h2{
+  padding-top:75px}
+.page-checkout #edit-prescription{
+  margin:30px
+0 0 0}
+#rx_extra_choice .rx_extra_choice-details{
+  left:430px}
+}
+@media only screen and (max-width: 1400px) and (min-width: 1000px){
+  .checkout .list-items .cart-preview{
+  width:15%}
+.checkout .list-items .cart-description{
+  width:85%}
+}
+@media only screen and (max-width: 999px){
+  .checkout .list-items .cart-preview{
+  width:20%}
+.checkout .list-items .cart-description{
+  width:80%}
+}
