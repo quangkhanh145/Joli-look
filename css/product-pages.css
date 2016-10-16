@@ -1,0 +1,1284 @@
+.page-product{
+  position:relative;
+  text-align:center}
+.breadcrumb{
+  padding:30px
+0.875vw 0;
+  margin-left:auto;
+  margin-right:auto}
+.breadcrumb
+ol{
+  list-style:none;
+  margin-left:calc(30px - 0.875vw);
+  padding:0}
+.breadcrumb ol
+li{
+  float:left;
+  margin:0;
+  padding:0}
+.section{
+  border-top:1px solid #ccc}
+.section.light-gray{
+  background-color:#f2f1f0;
+  padding-bottom:5vw}
+.section.light-gray+.section{
+  margin-top:0}
+.section.light-gray .section-title{
+  background:linear-gradient(#fff 0%, #fff 49%, #f2f1f0 50%, #f2f1f0 100%)}
+.section.light-gray + .section .section-title{
+  background:linear-gradient(#f2f1f0 0%, #f2f1f0 49%, #fff 50%, #fff 100%)}
+.section-title{
+  display:inline-block;
+  background:#fff;
+  position:relative;
+  text-transform:uppercase;
+  font-weight:100}
+.product-desc .out-of-stock
+.tag{
+  display:block;
+  padding:3.25%}
+.product-details .img-holder{
+  position:relative;
+  width:100vw;
+  height:57.345vw}
+.product-details .img-holder
+img{
+  width:100%;
+  height:auto}
+#headshot-notice{
+  margin:1em
+auto}
+.product-desc
+.button{
+  display:block;
+  width:100%}
+.img-holder li:before{
+  content:'';
+  position:absolute;
+  z-index:9;
+  display:block;
+  width:inherit;
+  height:100%}
+.product-details
+.thumbnails{
+  display:block;
+  clear:both;
+  margin:0;
+  text-align:center}
+.product-details .thumbnails
+li{
+  display:inline;
+  cursor:pointer}
+.radio-group{
+  margin:0
+0 5vw;
+  font-size:3.3vw}
+.radio-group .opt-row{
+  margin-bottom:1rem}
+.radio-group
+input{
+  vertical-align:top;
+  margin-right:2vw}
+.filmstrip{
+  width:100%;
+  height:0;
+  padding-bottom:56.25%;
+  margin:1em
+auto;
+  overflow:hidden;
+  position:relative}
+.text-link{
+  cursor:pointer;
+  text-decoration:none;
+  transition:color 0.3s;
+  font-weight:600}
+.text-link:hover{
+  color:#ccc;
+  text-decoration:none}
+.product-desc>p{
+  margin:15px
+0}
+.color,.price{
+  font-family:"brandon-grotesque",sans-serif}
+.swatches{
+  display:block;
+  clear:both;
+  margin:0;
+  text-align:center}
+.swatches
+li{
+  display:inline}
+.swatches
+a{
+  display:inline-block;
+  width:10vw;
+  height:10vw;
+  border-radius:100%;
+  background:#ebebeb;
+  box-shadow:0 0 0 1px #ccc}
+.swatches
+img{
+  width:100%;
+  height:100%;
+  border-radius:inherit}
+.swatches .selected
+img{
+  padding:1vw}
+.swatches
+p.separator{
+  font-size:8px;
+  margin:5px
+0 0 0}
+.hurry-up{
+  font-family:"brandon-grotesque",sans-serif;
+  text-transform:uppercase;
+  font-size:11px;
+  font-weight:400;
+  color:#d83830;
+  margin:1rem 0}
+.hurry-up:before,.hurry-up:after{
+  content:'-';
+  margin:0
+5px}
+.rating{
+  unicode-bidi:bidi-override;
+  direction:rtl;
+  display:inline-block;
+  vertical-align:middle}
+.rating>span,.rating>a{
+  background:url(/images/icon-star.svg) left top no-repeat;
+  background-size:cover;
+  display:inline-block;
+  position:relative;
+  opacity:0.3}
+.rating>.star-full,.rating>a:hover,.rating>a:hover~a{
+  opacity:1;
+  cursor:pointer}
+.rating>.star-half{
+  opacity:1}
+.rating>.star-half:before{
+  content:'';
+  display:inline-block;
+  position:absolute;
+  left:50%;
+  background:#fff;
+  opacity:0.7}
+.rating>a.star-half:hover:before,.rating>:hover~a.star-half:before{
+  opacity:0}
+.rating-scroll{
+  font-weight:bold}
+#reviews
+.rating{
+  padding-left:0}
+#reviews .rating, #reviews
+.author{
+  white-space:nowrap}
+#reviews .product-img
+img{
+  width:100%;
+  height:auto}
+#reviews .reviews-info{
+  margin-bottom:3vw;
+  font-weight:bold;
+  font-style:italic;
+  text-align:left}
+#reviews .arrow-down{
+  font-weight:700}
+#reviews .arrow-down:after{
+  content:'';
+  display:inline-block;
+  width:0;
+  height:0;
+  vertical-align:middle;
+  border-left:5px solid transparent;
+  border-right:5px solid transparent;
+  border-top:5px solid #000;
+  margin-left:5px}
+.rating>span,.rating>a{
+  width:18px;
+  height:18px}
+.rating>.star-half:before{
+  width:9px;
+  height:18px}
+.swipe{
+  position:relative}
+.swipe
+img{
+  margin:0
+auto}
+.icon-prev,.icon-next{
+  display:block;
+  width:6vw;
+  height:6vw;
+  position:absolute;
+  top:50%;
+  left:0;
+  margin-top:-3vw;
+  z-index:9}
+.icon-next{
+  left:auto;
+  right:0;
+  -webkit-transform:rotate(180deg);
+  -moz-transform:rotate(180deg);
+  -ms-transform:rotate(180deg);
+  transform:rotate(180deg)}
+.icon-prev img, .icon-next
+img{
+  width:100%;
+  height:auto}
+.instafame ul
+img{
+  width:80%;
+  height:auto}
+.recently-viewed .grid-item{
+  position:relative}
+.recently-viewed .icon-remove{
+  position:absolute;
+  top:6vw;
+  right:6vw;
+  width:3vw;
+  height:3vw}
+#virtual-tryon{
+  display:none;
+  position:relative;
+  width:100%;
+  -webkit-box-sizing:content-box;
+  -moz-box-sizing:content-box;
+  box-sizing:content-box;
+  background-color:#fff}
+#webcam-supported,#webcam-not-supported{
+  display:none}
+#tryon-img{
+  position:relative;
+  display:block;
+  width:100%;
+  height:inherit !important}
+#tryon-img>*{
+  position:absolute;
+  top:50%;
+  left:50%;
+  z-index:1;
+  height:100% !important;
+  width:auto !important;
+  max-height:100%;
+  max-width:100%;
+  -ms-transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
+  transform:translate(-50%,-50%)}
+.img>img{
+  width:100%}
+.you-viewed-ul>div,.you-may-also-like-ul>div{
+  width:100%}
+.you-viewed-ul>div>div,.you-may-also-like-ul>div>div{
+  width:100%}
+#obsolete_product_details_block .product-details .img-holder{
+  opacity:0.5;
+  filter:alpha(opacity=50)}
+#similar-products{
+  padding-top:20px}
+.related-products
+.obsolete.button{
+  margin-top:60px}
+.obsolete-social .obsolete-social-label{
+  font-weight:bold;
+  font-size:5vw;
+  margin:20px
+auto}
+.obsolete-social{
+  margin-bottom:20px}
+@media only screen and ( max-aspect-ratio: 1/1 ){
+  #tryon-img>*{
+  height:auto !important;
+  width:100% !important;
+  max-height:100%}
+}
+#tryon-img .vm-video{
+  z-index:2}
+#virtual-tryon .close-icon{
+  position:absolute;
+  top:0;
+  right:0;
+  z-index:9;
+  display:block;
+  background:#fff}
+#loading{
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:3;
+  width:100%;
+  height:100%;
+  background:#fff;
+  opacity:0.5}
+.loader{
+  position:absolute;
+  top:50%;
+  left:50%;
+  z-index:3;
+  margin-left:-16px;
+  margin-top:-16px}
+#virtual-tryon
+.h5{
+  background:#fb918f;
+  font-size:20px;
+  margin:0;
+  padding:2% 4%;
+  vertical-align:middle}
+#virtual-tryon
+.button{
+  font-weight:100;
+  border-width:1px}
+#virtual-tryon .button:not(.dark){
+  background-color:#fff;
+  border-color:#ccc}
+#video-canvas{
+  position:absolute;
+  top:0px;
+  left:0px;
+  -o-transform:scaleX(-1);
+  -webkit-transform:scaleX(-1);
+  transform:scaleX(-1);
+  -ms-filter:fliph;
+  filter:fliph}
+#videoel{
+  -o-transform:scaleX(-1);
+  -webkit-transform:scaleX(-1);
+  transform:scaleX(-1);
+  -ms-filter:fliph;
+  filter:fliph}
+#video-container,#image-container{
+  width:100%;
+  height:auto;
+  overflow:hidden;
+  position:relative;
+  margin:0
+auto}
+#video-canvas,#image-canvas,#videoel{
+  width:inherit;
+  height:inherit}
+.product-desc
+.price{
+  margin-left:auto;
+  margin-right:auto}
+@media only screen and (max-width: 1024px){
+  .section{
+  padding-top:12%;
+  padding-top:5vw;
+  margin:12% 2% 16%;
+  margin-top:5vw}
+.section-title{
+  font-size:200%;
+  font-size:5vw;
+  font-weight:700;
+  padding:0
+2%;
+  top:-7.5vw}
+.section.light-gray,.section.light-gray+.section{
+  margin-left:0;
+  margin-right:0;
+  padding-left:2%;
+  padding-right:2%}
+.section .close-icon.x{
+  width:30px;
+  height:30px;
+  padding:0}
+.product-details .img-holder{
+  overflow:hidden}
+.product-desc{
+  padding:4%}
+.product-desc
+.h2{
+  font-size:300%;
+  font-size:6.6vw;
+  font-weight:100;
+  margin:3.5% 0 3.5%}
+.product-desc
+.button{
+  margin:4% 0}
+.product-desc
+.color{
+  font-size:225%;
+  font-size:5vw;
+  font-weight:700}
+.product-desc .price, .product-desc
+.discount_price{
+  font-size:250%;
+  font-size:5.5vw;
+  font-weight:700;
+  display:block}
+.product-desc .price span:first-child{
+  margin-left:-5px}
+.product-desc
+.price{
+  margin:0
+5px}
+.product-desc .price
+strong.price{
+  padding-right:3px !important}
+.product-desc .discount_price
+strong{
+  padding-left:0px}
+.product-desc .additional-info{
+  font-size:150%;
+  font-size:3.3vw;
+  width:90%;
+  margin:0
+auto}
+.swatches{
+  margin:6% 0}
+.swatches
+a{
+  margin:0
+0 1vw 1vw}
+.swatches :first-child
+a{
+  margin-left:0}
+.section.instafame .icon-prev,
+.section.instafame .icon-next{
+  margin-top:0}
+.instafame li,
+.related-products
+li{
+  display:none}
+.instafame li:first-child,
+.related-products li:first-child{
+  display:block;
+  width:100%}
+.related-products{
+  margin-bottom:0}
+.related-products .products-list .h2,
+.related-products .products-list
+.color{
+  font-size:175%;
+  font-size:4.1vw;
+  margin:4% 0}
+.help{
+  padding:3%;
+  margin-bottom:0}
+.help
+h3{
+  margin:8% 0 4%}
+.help
+p{
+  font-size:175%;
+  font-size:4.1vw;
+  margin:4% 0}
+#virtual-tryon .close-icon{
+  width:12vw;
+  height:12vw;
+  padding:3vw}
+.carousel
+ul{
+  padding:30px}
+#reviews .product-img{
+  }
+}
+@media only screen and (max-width: 720px){
+  .section{
+  border-color:#000}
+.page-product .menu-list{
+  margin:0
+0 16%}
+.product-details .social-icons
+img{
+  width:6vw !important;
+  height:6vw !important;
+  cursor:pointer;
+  margin:0
+1vw}
+.section.light-gray{
+  margin:0}
+#quality-manufacturing
+.grid{
+  background-image:none;
+  display:block}
+#quality-manufacturing .grid>*{
+  width:100%;
+  border-top:1px solid #ccc}
+#quality-manufacturing .grid>*:first-child{
+  border:0}
+.product-details .thumbnails
+a{
+  display:inline-block;
+  text-indent:-9999px;
+  width:1px;
+  height:1px;
+  margin-left:1%;
+  border:9px
+solid #c2c2c2;
+  border-radius:9px}
+.product-details .thumbnails
+img{
+  width:100%;
+  height:auto}
+.product-details .thumbnails li
+a{
+  cursor:pointer}
+.product-details .thumbnails li
+a.selected{
+  border-color:#000}
+.product-details .thumbnails
+li{
+  display:none}
+.product-details .thumbnails
+li.selected{
+  display:block;
+  border-color:#000}
+.product-details .measurements-overlay{
+  display:none !important}
+.product-info
+.swatches{
+  margin:0;
+  padding:2.5vw 0}
+.hurry-up{
+  font-size:3.3vw}
+#buyfrom,#addtocart{
+  margin-top:0}
+#choose-lenses{
+  position:absolute;
+  padding:0
+4vw;
+  left:0;
+  bottom:0;
+  right:0;
+  min-height:100%;
+  background-color:#fff;
+  border:1px
+solid #000}
+#choose-lenses
+li{
+  position:relative;
+  padding:4vw 0 4vw 30px}
+#choose-lenses .icon-remove{
+  position:absolute;
+  right:2.5vw;
+  top:2.5vw}
+#choose-lenses input[type="radio"]{
+  position:absolute;
+  left:0;
+  top:3.6vw}
+#choose-lenses li p.text-left{
+  margin-top:0.5rem}
+#choose-lenses .polarized-lenses{
+  margin:0;
+  padding:2vw 0 8vw}
+#choose-lenses .polarized-lenses
+label{
+  font-weight:100}
+#choose-lenses label,
+#choose-lenses
+strong{
+  font-size:4vw;
+  font-weight:400;
+  font-family:"brandon-grotesque",sans-serif}
+#choose-lenses p.text-left{
+  font-size:3vw}
+.recently-viewed .grid-item{
+  width:100%}
+.recently-viewed .products-list img,
+.related-products .products-list
+img{
+  width:80%;
+  height:auto}
+#virtual-tryon{
+  width:100%}
+.slick-list{
+  width:100%}
+#virtual-tryon .buttons-holder{
+  padding:4%}
+#virtual-tryon .buttons-holder
+.button{
+  margin:2% 0}
+#reviews
+li{
+  text-align:left;
+  padding-top:30px;
+  padding-bottom:15px;
+  border:solid #ccc;
+  border-width:1px 0 0}
+#reviews li:first-child{
+  border-top:0;
+  padding-top:0}
+#reviews
+.rating{
+  float:left;
+  margin-right:30px}
+#reviews
+.author{
+  float:left;
+  width:50%}
+#reviews
+.text{
+  display:block;
+  clear:both;
+  padding:20px
+0}
+#obsolete_product_details_block
+h1{
+  font-size:24px}
+.related-products
+.obsolete.button{
+  margin-top:20px;
+  margin-bottom:20px}
+#obsolete_product_details_block .obsolete-product-info
+span{
+  float:left}
+#obsolete_product_details_block .obsolete-product-info
+.obsolete{
+  margin-top:20px}
+}
+@media only screen and (min-width: 721px){
+  .section{
+  padding:20px
+0;
+  margin-top:5vw;
+  margin-bottom:0}
+.section-title{
+  font-size:11px;
+  font-weight:400;
+  top:-30px;
+  padding:0
+5px}
+.product-details{
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display:box;
+  display:flex;
+  -webkit-box-direction:normal;
+  -moz-box-direction:normal;
+  -webkit-box-orient:horizontal;
+  -moz-box-orient:horizontal;
+  -webkit-flex-direction:row;
+  -ms-flex-direction:row;
+  flex-direction:row;
+  -webkit-flex-wrap:no-wrap;
+  -ms-flex-wrap:no-wrap;
+  flex-wrap:no-wrap;
+  -webkit-box-pack:justify;
+  -moz-box-pack:justify;
+  -webkit-justify-content:space-between;
+  box-pack:justify;
+  -ms-flex-pack:justify;
+  justify-content:space-between;
+  -webkit-align-content:stretch;
+  -ms-flex-line-pack:stretch;
+  box-align:stretch;
+  align-content:stretch;
+  border:0
+none;
+  margin:0
+3vw;
+  clear:both}
+.product-details .product-img{
+  -webkit-box-pack:justify;
+  -moz-box-pack:justify;
+  -webkit-justify-content:space-between;
+  box-pack:justify;
+  -ms-flex-pack:justify;
+  justify-content:space-between}
+.product-details .product-img{
+  width:66vw;
+  margin-bottom:12px}
+.product-details .product-desc{
+  width:28vw;
+  max-width:350px;
+  margin:0
+auto}
+.product-details .img-holder{
+  width:100%;
+  height:auto}
+.product-details
+.thumbnails{
+  font-size:0}
+.product-details .thumbnails li
+img{
+  border:1px
+solid #beb6b3}
+.product-details .thumbnails li.selected
+img{
+  border-color:#000}
+.product-desc
+.tag{
+  font-size:13px}
+#quality-manufacturing
+p{
+  font-size:13px}
+.product-details .ruler-icon{
+  position:absolute;
+  bottom:0;
+  left:0}
+.ruler-icon{
+  width:30px;
+  height:30px;
+  opacity:0.3}
+.ruler-icon
+img{
+  width:100%;
+  height:auto}
+.product-info{
+  min-height:255px}
+.product-info
+.swatches{
+  margin:0;
+  padding:18px
+0 0}
+#buyfrom,#addtocart{
+  margin-top:18px}
+#choose-lenses{
+  position:absolute;
+  padding:0
+15px;
+  left:0;
+  bottom:0;
+  right:0;
+  min-height:100%;
+  background-color:#fff;
+  border:1px
+solid #000;
+  z-index:999}
+#choose-lenses
+ul{
+  margin:10px
+0 0}
+#choose-lenses li
+p{
+  margin-bottom:0}
+#choose-lenses
+li{
+  position:relative;
+  padding:12px
+0 12px 20px}
+#choose-lenses input[type="radio"]{
+  position:absolute;
+  left:0;
+  top:10px}
+#choose-lenses .icon-remove{
+  position:absolute;
+  right:12px;
+  top:12px}
+#choose-lenses label,
+#choose-lenses
+strong{
+  font-size:15px;
+  font-weight:400;
+  font-family:"brandon-grotesque",sans-serif;
+  margin:0}
+#choose-lenses p.text-left{
+  font-size:14px}
+#choose-lenses .polarized-lenses{
+  margin:10px
+0 20px}
+#choose-lenses .polarized-lenses
+label{
+  font-weight:100}
+.radio-group{
+  display:block;
+  margin:0
+0 15px;
+  font-size:14px;
+  text-align:left}
+.radio-group
+input{
+  vertical-align:top;
+  margin:0
+5px 0 0}
+.icon-prev,.icon-next{
+  width:30px;
+  height:30px}
+.icon-next
+img{
+  margin-top:-1px}
+.recently-viewed .max-width{
+  width:80%;
+  margin:0
+auto}
+.recently-viewed .icon-remove{
+  top:0;
+  right:0;
+  width:15px;
+  height:15px}
+.instafame-holder{
+  max-width:680px;
+  margin:0
+auto;
+  position:relative}
+.instafame
+ul{
+  width:100%;
+  overflow:hidden;
+  margin:0
+auto;
+  max-width:600px}
+.instafame ul
+img{
+  width:100%;
+  max-width:140px}
+.instafame li, .instafame li:first-child,
+.related-products li, .related-products li:first-child{
+  display:inline-block;
+  width:auto}
+#reviews
+ul{
+  display:table;
+  font-size:13px}
+#reviews
+li{
+  display:table-row}
+#reviews li>*{
+  display:table-cell;
+  vertical-align:top;
+  text-align:left;
+  padding-left:30px;
+  padding-bottom:30px}
+#reviews .reviews-info{
+  padding-left:30px}
+#reviews .product-img{
+  width:200px}
+#reviews.withimages li>*:not(.product-img){
+  padding-top:20px}
+.recently-viewed .grid-item,
+.related-products .grid-item{
+  width:25% !important}
+.prescription-call
+.h6{
+  font-size:11px;
+  font-weight:400;
+  margin-top:30px}
+.prescription-call
+.button{
+  background:#fff;
+  font-size:14px;
+  padding:7px
+30px;
+  margin-top:16px}
+#prescription-call-content-title{
+  cursor:pointer}
+.prescription-call-content{
+  display:none}
+.prescription-form{
+  width:278px;
+  margin:0
+auto}
+.prescription-form input,
+.prescription-form
+.button{
+  width:100%;
+  display:block;
+  clear:both;
+  margin:0
+0 12px;
+  text-align:center}
+.prescription-form
+input{
+  font-size:13px;
+  padding:9px
+0;
+  border:1px
+solid #ccc}
+#webcam-not-supported
+.button{
+  padding:20px;
+  width:auto;
+  margin:1em
+auto;
+  float:none}
+#virtual-tryon .buttons-holder
+.button{
+  padding:20px}
+#virtual-tryon .buttons-holder
+.button.half{
+  width:50%;
+  float:left}
+#obsolete_product_details_block .mobile-only{
+  display:none !important}
+#obsolete_product_details_block .desktop-only{
+  display:block !important}
+#obsolete_product_details_block .obsolete-product-info{
+  margin-top:40px}
+#obsolete_product_details_block .obsolete-product-info
+li{
+  margin-top:20px}
+#obsolete_product_details_block .obsolete-product-info li:first-child{
+  margin-top:0}
+.obsolete-social .obsolete-social-label{
+  font-size:24px;
+  margin-top:40px}
+}
+@media only screen and (min-width: 721px) and (max-width: 1024px){
+  .product-details .social-icons
+img{
+  width:3vw !important;
+  height:3vw !important;
+  cursor:pointer;
+  margin:0
+1vw}
+.product-details .product-img{
+  width:55vw}
+.product-details .product-desc{
+  width:35vw;
+  margin:0}
+.product-desc{
+  padding:0
+0 0 1%}
+.product-desc
+.h2{
+  font-size:18px;
+  margin:9px
+0 0}
+.product-desc
+.color{
+  font-size:14px}
+.product-desc
+.price{
+  font-size:14px}
+.product-desc .price
+strong{
+  font-size:17px}
+.product-desc .price
+strong.price{
+  margin-left:10px}
+.product-desc .additional-info{
+  font-size:10px;
+  width:100%}
+.product-details
+.button{
+  font-size:14px;
+  padding:7px}
+.swatches{
+  margin:12px
+0}
+.swatches
+a{
+  width:24px;
+  height:24px;
+  border-radius:24px}
+.swatches .selected
+img{
+  padding:3px}
+.moreinfo
+p{
+  font-size:11px}
+.related-products .products-list .h2,
+.related-products .products-list
+.color{
+  font-size:12px;
+  margin:12px
+0 3px}
+.rating>span,.rating>a{
+  width:12px;
+  height:12px}
+.rating>.star-half:before{
+  width:6px;
+  height:12px}
+.recently-viewed li
+img{
+  width:80%}
+#virtual-tryon{
+  margin-bottom:50px}
+#virtual-tryon
+.button.full{
+  font-weight:100;
+  margin:0}
+#virtual-tryon .close-icon{
+  width:44px;
+  height:44px;
+  padding:12px}
+}
+@media only screen and (min-width: 1025px){
+  .breadcrumb,.product-details,.section{
+  width:100%;
+  margin-left:auto;
+  margin-right:auto;
+  padding:30px
+0.875vw 0}
+.section.light-gray{
+  padding-bottom:60px}
+.max-width{
+  max-width:1200px;
+  margin-left:auto;
+  margin-right:auto}
+.section{
+  padding-top:20px}
+.section-title{
+  font-size:14px}
+.product-desc
+p{
+  font-size:15px}
+.product-desc
+.h2{
+  font-size:24px;
+  font-weight:100;
+  margin:12px
+0 0}
+.product-desc
+.color{
+  font-size:18px;
+  font-weight:400}
+.product-desc
+.price{
+  font-size:18px;
+  margin-bottom:9px}
+.product-desc .price
+strong{
+  font-size:22px;
+  line-height:1;
+  display:block;
+  margin:5px}
+.product-desc .price span:first-child{
+  margin-left:-5px !important}
+.product-desc .price
+span.row{
+  margin-left:auto}
+.product-desc
+.price{
+  margin:0
+5px}
+.product-desc .price
+strong.price{
+  padding-right:3px !important}
+.product-desc .additional-info{
+  font-size:13px;
+  width:100%}
+.product-details .thumbnails
+li{
+  border-width:1px}
+.product-details .thumbnails
+.selected{
+  border-color:#000}
+.product-details
+.button{
+  font-size:18px;
+  padding:10px;
+  margin:9px
+0}
+.product-details .social-icons
+a{
+  width:28px;
+  height:28px}
+.product-info{
+  min-height:325px}
+#choose-lenses{
+  padding:0
+20px}
+#choose-lenses
+ul{
+  margin:0}
+#choose-lenses
+li{
+  padding:15px
+0 15px 25px}
+#choose-lenses .icon-remove{
+  right:20px;
+  top:20x}
+#choose-lenses label,
+#choose-lenses
+strong{
+  font-size:16px;
+  font-weight:400;
+  font-family:"brandon-grotesque",sans-serif}
+#choose-lenses input[type="radio"]{
+  top:14px}
+#choose-lenses .polarized-lenses
+label{
+  margin-left:5px}
+.icon-prev,.icon-next{
+  margin-top:0}
+.carousel .slick-slider{
+  width:810px;
+  margin:0
+auto;
+  padding:0
+30px}
+.filmstrip{
+  width:750px;
+  height:426px;
+  padding-bottom:0}
+.swatches{
+  margin:18px
+0 30px}
+.swatches
+a{
+  width:36px;
+  height:36px;
+  border-radius:36px;
+  margin:0
+4px}
+.swatches .selected
+img{
+  padding:4px}
+.moreinfo
+.teaser{
+  font-size:15px}
+.moreinfo
+p{
+  font-size:13px}
+.related-products .products-list .h2,
+.related-products .products-list
+.color{
+  font-size:14px;
+  margin:12px
+0 3px}
+.radio-group{
+  font-size:16px;
+  width:70%;
+  margin:0
+auto 15px}
+.rating>span,.rating>a{
+  width:16px;
+  height:16px}
+.rating>.star-half:before{
+  width:8px;
+  height:16px}
+.prescription-call
+.h6{
+  font-size:14px}
+.prescription-call
+.button{
+  font-size:17px;
+  padding:9px
+36px}
+#virtual-tryon .close-icon{
+  width:58px;
+  height:58px;
+  padding:12px}
+#virtual-tryon
+.h5{
+  padding:10px
+0 0;
+  line-height:45px}
+#virtual-tryon .h5:before,
+#virtual-tryon .h5:after{
+  content:url(/images/tryon-lookup-arrow.png);
+  display:inline-block;
+  margin:0
+30px;
+  line-height:45px;
+  vertical-align:middle}
+#video-container{
+  max-height:calc(100vh - 200px);
+  width:calc(100vh - 200px * 0.75)}
+#obsolete_product_details_block .obsolete-product-info{
+  margin-top:70px}
+}
+@media only screen and (min-width: 1600px){
+  .product-details .product-img{
+  width:66%}
+.product-details .product-desc{
+  width:29%}
+}
+.product-details .social-icons
+img{
+  width:28px;
+  height:28px;
+  cursor:pointer}
+#upload-result{
+  font-size:21px;
+  font-weight:300;
+  position:absolute;
+  z-index:20;
+  top:50%;
+  background-color:white;
+  text-align:center;
+  width:100%;
+  left:0}
+.measurements-overlay{
+  position:absolute;
+  bottom:60px;
+  right:0;
+  height:40px;
+  width:40px;
+  z-index:2;
+  display:none;
+  background:url("/images/ff-measurements.png") bottom right no-repeat;
+  overflow:hidden;
+  transition:0.2s}
+.measurements-overlay[data-view="front"],.measurements-overlay[data-view="side"]{
+  display:block}
+.measurements-overlay:hover{
+  width:100%;
+  height:300px;
+  background-color:rgba(255,255,255,0.4)}
+.overlay-item{
+  display:block;
+  position:absolute;
+  opacity:0;
+  text-align:center;
+  background:url("/images/ff-measure-pixel.png") center 9px repeat-x;
+  line-height:17px;
+  transition:opacity 0.2s, width 0.2s}
+.overlay-item.vertical{
+  display:table !important;
+  background:url("/images/ff-measure-pixel.png") center 9px repeat-y;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box}
+.overlay-item.vertical .vert-wrap{
+  display:table-cell;
+  vertical-align:middle;
+  height:100%}
+.measurements-overlay:hover .overlay-item{
+  opacity:1}
+.measurements-overlay[data-view="front"] .overlay-templeLength,
+.measurements-overlay[data-view="side"] .overlay-lensDiameter,
+.measurements-overlay[data-view="side"] .overlay-lensDepth,
+.measurements-overlay[data-view="side"] .overlay-bridgeWidth,
+.measurements-overlay[data-view="side"] .overlay-frameWidth{
+  display:none}
+.measurements-overlay:hover .overlay-item.vertical{
+  transition:opacity 0.4s, height 0.2s}
+.overlay-item:before,.overlay-item:after{
+  content:'';
+  width:2px;
+  height:4px;
+  top:50%;
+  background:url("/images/ff-measure-pixel.png") 0 0 repeat-y;
+  position:absolute}
+.overlay-item:before{
+  left:0}
+.overlay-item:after{
+  right:0;
+  background-position:right 9px}
+.overlay-item.vertical:before,.overlay-item.vertical:after{
+  left:50%;
+  height:1px;
+  width:4px;
+  margin-left:-4px;
+  background:url("/images/ff-measure-pixel.png") 0 0 repeat-x}
+.overlay-item.vertical:before{
+  top:0}
+.overlay-item.vertical:after{
+  top:auto;
+  bottom:0}
+.overlay-item.below:before,.overlay-item.below:after{
+  margin-top:-4px}
+.overlay-item
+span{
+  background:rgba(255,255,255,0.9);
+  padding:0
+2px}
+.overlay-bridgeWidth{
+  left:50%;
+  margin-left:-40px;
+  top:40px;
+  width:80px}
+.overlay-frameWidth{
+  left:50%;
+  margin-left:-240px;
+  top:10px;
+  width:480px}
+.overlay-templeLength{
+  left:50%;
+  margin-left:-260px;
+  top:30px;
+  width:530px}
+.overlay-lensDepth{
+  top:50%;
+  right:5px;
+  height:120px;
+  margin-top:-60px}
+.overlay-lensDiameter{
+  bottom:30px;
+  left:25%;
+  width:160px;
+  margin-left:-40px}
