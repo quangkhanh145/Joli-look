@@ -1,1 +1,0 @@
-Raven.config('https://d4b960b5a2a149dc828bfd74d9a7d2cf:78785783c6234ae880c9103c3aaa6796@app.getsentry.com/63739',{whitelistUrls:[/getsentry\.com/,/cdn\.getsentry\.com/,/\.bonlook\.net/,/\.bonlook\.com/],allowSecretKey:true,ignoreErrors:['fb_xd_fragment']}).install();
