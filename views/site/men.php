@@ -43,10 +43,10 @@ $this->title = 'Mắt kính thời trang online';
         </style>
     <div class="promo main-promo main-promo--split">
      <div class="table">
-      <div class="table-cell" style="background-image: url(images/genderless/homepage/Homepage_split_studio.jpg);" data-banner-href="/women" data-banner-title='see women'>
+      <div class="table-cell" style="background-image: url(<?=Yii::$app->homeUrl?>images/genderless/homepage/Homepage_split_studio.jpg);" data-banner-href="/women" data-banner-title='see women'>
         <a href="/women" class="button dark">see women</a>
       </div>
-      <div class="table-cell" style="background-image: url(images/collections/men/studio/homepage/genderless/Homepage_split_studio.jpg);" data-banner-href="/men" data-banner-title='see men'>
+      <div class="table-cell" style="background-image: url(<?=Yii::$app->homeUrl?>images/collections/men/studio/homepage/genderless/Homepage_split_studio.jpg);" data-banner-href="/men" data-banner-title='see men'>
         <a href="/men" class="button dark">see men</a>
       </div>
     </div>
@@ -60,7 +60,7 @@ $this->title = 'Mắt kính thời trang online';
         <ul class="nobullet">
           <li>
             <a href="/sunglasses/men/class/mahogany-black">
-              <img src="images/collections/men/studio/homepage/men/class_croisees.jpg" alt=""/>
+              <img src="<?=Yii::$app->homeUrl?>images/collections/men/studio/homepage/men/class_croisees.jpg" alt=""/>
             </a>
             <a href="/sunglasses/men">
               <span class="front-frames-title">See Sunglasses</span>
@@ -91,8 +91,8 @@ $this->title = 'Mắt kính thời trang online';
 
   </style>
 
-  <div class="promo promo-men-2" style="background-image: url('images/collections/men/studio/homepage/genderless/studio_bandeau1.jpg'); cursor: pointer;" data-banner-href="/eyeglasses/men/form/black-mahogany" data-banner-title="Introducing form">
-    <img src="images/collections/men/studio/homepage/genderless/studio_bandeau1.jpg" class="tablet-hide desktop-hide" />
+  <div class="promo promo-men-2" style="background-image: url('<?=Yii::$app->homeUrl?>images/collections/men/studio/homepage/genderless/studio_bandeau1.jpg'); cursor: pointer;" data-banner-href="/eyeglasses/men/form/black-mahogany" data-banner-title="Introducing form">
+    <img src="<?=Yii::$app->homeUrl?>images/collections/men/studio/homepage/genderless/studio_bandeau1.jpg" class="tablet-hide desktop-hide" />
     <div class="table promo-text text-center right">
       <div class="table-cell">
         <h3 class="h1">Introducing form</h3>
@@ -123,8 +123,8 @@ $this->title = 'Mắt kính thời trang online';
 
   </style>
 
-  <div class="promo promo-men-1" style="background-image: url('images/men/Bandeau_bestsellersmen_1200x475.jpg'); cursor: pointer;" data-banner-href="/men/bestsellers" data-banner-title="Favorites Frames">
-    <img src="images/promo/thanksgiving/Bandeau_bestsellersmen_1200x475.jpg" class="tablet-hide desktop-hide" />
+  <div class="promo promo-men-1" style="background-image: url('<?=Yii::$app->homeUrl?>images/men/Bandeau_bestsellersmen_1200x475.jpg'); cursor: pointer;" data-banner-href="/men/bestsellers" data-banner-title="Favorites Frames">
+    <img src="<?=Yii::$app->homeUrl?>images/promo/thanksgiving/Bandeau_bestsellersmen_1200x475.jpg" class="tablet-hide desktop-hide" />
     <div class="table promo-text text-center left">
       <div class="table-cell">
         <h3 class="h1">Favorites Frames</h3>
@@ -151,19 +151,19 @@ $this->title = 'Mắt kính thời trang online';
     <div class="table content-holder large">
       <div class="table-cell left">
         <a href="/contact">
-          <img src="images/footer_contactus.jpg" alt="Contact us" />
+          <img src="<?=Yii::$app->homeUrl?>images/footer_contactus.jpg" alt="Contact us" />
           <span id="discover_left_block">Contact us</span>
         </a>
       </div>
       <div class="table-cell left">
         <a href="/eyeglasses/men?filter_shape=Rectangle">
-          <img src="images/footer_classicframes.jpg" alt="Square Frames" />
+          <img src="<?=Yii::$app->homeUrl?>images/footer_classicframes.jpg" alt="Square Frames" />
           <span id="discover_center_block">Square Frames</span>
         </a>
       </div>
       <div class="table-cell left cellphone-hide">
         <a href="/sunglasses/men">
-          <img src="images/footer_sunglasses_men.jpg" alt="#BONLOOK" />
+          <img src="<?=Yii::$app->homeUrl?>images/footer_sunglasses_men.jpg" alt="#BONLOOK" />
           <span id="discover_right_block">men's sunglasses</span>
         </a>
       </div>

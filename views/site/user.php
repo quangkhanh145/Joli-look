@@ -1,5 +1,6 @@
 <?php
 $this->title = 'Đăng nhập | JoliLook';
+use yii\bootstrap\ActiveForm;
 use yii\helpers\Html;
 ?>
 <div id="main"  class=""  >
@@ -19,11 +20,22 @@ use yii\helpers\Html;
             <div class="grid grid-vstretch grid-center border-bottom">
             <div class="border-right w-50">
                 <div class="box bordered-box dark">
-                    <form name="login-form" id="login-form" class="form" action="/user/login" method="POST">
+                    <!-- <form name="login-form" id="login-form" class="form" action="/user/login" method="POST"> -->
+                    <?php
+$form = ActiveForm::begin(['id' => 'login-form', 'options' => [
+	'class' => 'form',
+	'name' => 'login-form'],
+	'fieldConfig' => [
+		'template' => "{input}",
+		'options' => ['tag' => null],
+	]]);
+?>
                     <h3 class="h6 uppercase">Log in to your account</h3>
                     <input type="hidden" name="redirect" value="/user"/>
-                    <input type="email" name="username" placeholder="Email address" />
-                    <input type="password" name="password" placeholder="Password" />
+                    <!-- <input type="email" name="username" placeholder="Email address" />
+                    <input type="password" name="password" placeholder="Password" /> -->
+                    <?=$form->field($model, 'email', ['inputOptions' => ['placeholder' => 'Email address', 'type' => 'email', 'name' => 'username', 'id' => false, 'class' => false]])->label(false)->textInput()?>
+                    <?=$form->field($model, 'password', ['inputOptions' => ['placeholder' => 'Password', 'type' => 'password', 'name' => 'password', 'id' => false, 'class' => false]])->label(false)->passwordInput()?>
                     <div class="grid grid-2-cols grid-baseline">
                         <div class="text-left">
                         <?=Html::checkbox('reveal-password', false, ['id' => 'show-pwd'])?> <?=Html::label('Show password', 'show-pwd')?>
@@ -31,7 +43,7 @@ use yii\helpers\Html;
                         <a href="/user/forgot-password" class="underlined text-right">Forgot password?</a>
                     </div>
                     <button type="submit" class="button full dark">Continue</button>
-                    </form>
+                    <?php ActiveForm::end();?>
                 </div>
             </div>
             <div class="w-50 rel">

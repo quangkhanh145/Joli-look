@@ -273,9 +273,24 @@ use yii\helpers\Url;
 </ul>
 <ul id="menu-account" class="desktop-only">
     <li data-menutitle="Search"><a id="search-desktop_link" href="#search, #search-field" class="js-open">Search</a></li>
-    <li data-menutitle="Login">
+    <?php
+if (Yii::$app->user->isGuest) {
+	print('<li data-menutitle="Login"><a href="' . Yii::$app->homeUrl . 'site/user">Login</a></li>');
+} else {
+	print('<li data-menutitle="My account" class="dropdown left top_menu">
+  <a href="/user" class="select-icon">My account</a>
+  <ul>
+  <a href="/user/orders">My orders</a>
+  <a href="/user">My profile</a>
+  <a href="/user/wishlist">My Wishlist</a>
+  <a href="' . Yii::$app->homeUrl . 'site/logout">Log out</a>
+  </ul>
+  </li>');
+}
+?>
+    <!-- <li data-menutitle="Login">
       <a href="<?=Yii::$app->homeUrl?>site/user">Login</a>
-  </li>
+  </li> -->
   <li data-menutitle="My bag" class="bag">
       <a id="cart-desktop_link" href="#bag-items" class="js-slide">
         <span class="invisible">My bag</span>
