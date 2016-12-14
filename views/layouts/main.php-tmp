@@ -31,12 +31,12 @@ use yii\helpers\Url;
 <?=Html::img(Url::to(['images/icon-menu.svg']), ['alt' => 'Open menu'])?>
           </a>
           <a href="#search, #search-field" class="search-icon js-open"><img src="<?=Yii::$app->homeUrl?>images/icon-magnifier.svg" alt="Search" /></a>
-          <div class="header-logo"><a href="/"><img src="<?=Yii::$app->homeUrl?>images/logo.png" alt="Jolilook" /></a></div>
+          <div class="header-logo"><a href="<?=Yii::$app->homeUrl?>"><img src="<?=Yii::$app->homeUrl?>images/logo.png" alt="Jolilook" /></a></div>
       </div>
       <div class="header-content">
         <div class="holder">
             <div class="content-holder">
-                <div class="header-logo desktop-only"><a href="/"><img src="<?=Yii::$app->homeUrl?>images/logo.png" alt="Jolilook" /></a>
+                <div class="header-logo desktop-only"><a href="<?=Yii::$app->homeUrl?>"><img src="<?=Yii::$app->homeUrl?>images/logo.png" alt="Jolilook" /></a>
                 </div>
                 <nav id="main-nav" class="menu-holder">
                     <div id="slideout-header" class="nav-header mobile-only">
@@ -48,10 +48,22 @@ use yii\helpers\Url;
                     <li class="mobile-only noborder" data-menutitle="Search">
                         <a href="#search, #search-field" class="boxed js-open js-slide">Search</a>
                     </li>
-                    <li data-menutitle="Login" class="mobile-only noborder">
-                        <a href="user" class="boxed">Login</a>
-                    </li>
-                    <li id="women-li" class="hspace">
+<?php if (Yii::$app->user->isGuest) {
+	print('<li data-menutitle="Login" class="mobile-only noborder">
+                        <a href="'.Yii::$app->homeUrl.'site/user" class="boxed">Login</a>
+                    </li>');
+} else {
+	print('<li data-menutitle="Login" class="mobile-only noborder"><a href="/user" class="boxed">
+                <div class="vertical-align-middle">My account</div>
+              </a>
+            </li>
+            <li data-menutitle="Logout" class="mobile-only noborder">
+              <a href="'.Yii::$app->homeUrl.'site/logout" class="boxed">Log out</a>
+            </li>');
+}
+
+?>
+<li id="women-li" class="hspace">
 <?=Html::a('Women', Url::to(['site/women'], true), ['class' => 'desktop-only selected'])?>
                         <a href="#women" class="mobile-only js-slide">Women</a>
                         <div id="women" class="slideout" data-menutitle="Women">

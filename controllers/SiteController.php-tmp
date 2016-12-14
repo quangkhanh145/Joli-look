@@ -7,6 +7,7 @@ use app\models\UsersForm;
 use Yii;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
+use yii\helpers\Url;
 use yii\web\Controller;
 
 class SiteController extends Controller {
@@ -29,7 +30,7 @@ class SiteController extends Controller {
 			'verbs'    => [
 				'class'   => VerbFilter::className(),
 				'actions' => [
-					'logout' => ['post'],
+					'logout' => ['get'],
 				],
 			],
 		];
@@ -56,7 +57,7 @@ class SiteController extends Controller {
 	 * @return string
 	 */
 	public function actionIndex() {
-		return $this->render('index');
+		return Yii::$app->response->redirect(Url::to(['site/women']));
 	}
 
 	/**
@@ -132,6 +133,21 @@ class SiteController extends Controller {
 			return $this->goBack();
 		}
 		return $this->render('user', [
+				'model' => $model,
+			]);
+	}
+	public function actionUsermobile() {
+		if (!Yii::$app->user->isGuest) {
+			return $this->goHome();
+		}
+
+		$model             = new UsersForm();
+		$model['email']    = Yii::$app->request->post()['email'];
+		$model['password'] = Yii::$app->request->post()['password'];
+		if ($model->login()) {
+			return $this->goBack();
+		}
+		return $this->render('usermobile', [
 				'model' => $model,
 			]);
 	}
