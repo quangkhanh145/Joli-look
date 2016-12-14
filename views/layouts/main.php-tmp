@@ -4,6 +4,7 @@
 /* @var $content string */
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 ?>
 <?php $this->beginPage()?>
@@ -15,29 +16,33 @@ use yii\helpers\Html;
     <title><?=Html::encode($this->title)?></title>
     <link href="icon.png" data-menuid="shortcut icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sacramento" type="text/css">
-    <link rel="stylesheet" href="css/index.css" type="text/css">
-    <script type="text/javascript" src="js/index.js"></script>
-<?php $this->head()?>
+<?=Html::cssFile(Url::to(['css/index.css']))?>
+    <?=Html::jsFile(Url::to(['js/index.js']))?>
+    <?php $this->head()?>
 </head>
 <body>
 <?php $this->beginBody()?>
 <header>
         <div class="header-holder mobile-only">
-          <a href="#bag-items" class="bag-icon js-slide"><img src="images/icon-bag.svg" alt="Open bag" /><span class="bag_number_of_items">0</span></a>
-          <a href="#menu-categories" id="open-menu" class="menu-icon js-slide"><img src="images/icon-menu.svg" alt="Open menu" /></a>
-          <a href="#search, #search-field" class="search-icon js-open"><img src="images/icon-magnifier.svg" alt="Search" /></a>
-          <div class="header-logo"><a href="/"><img src="images/logo.png" alt="Jolilook" /></a></div>
+          <a href="#bag-items" class="bag-icon js-slide">
+<?=Html::img(Url::to(['images/icon-bag.svg']), ['alt' => 'Open bag'])?>
+<span class="bag_number_of_items">0</span></a>
+          <a href="#menu-categories" id="open-menu" class="menu-icon js-slide">
+<?=Html::img(Url::to(['images/icon-menu.svg']), ['alt' => 'Open menu'])?>
+          </a>
+          <a href="#search, #search-field" class="search-icon js-open"><img src="<?=Yii::$app->homeUrl?>images/icon-magnifier.svg" alt="Search" /></a>
+          <div class="header-logo"><a href="/"><img src="<?=Yii::$app->homeUrl?>images/logo.png" alt="Jolilook" /></a></div>
       </div>
       <div class="header-content">
         <div class="holder">
             <div class="content-holder">
-                <div class="header-logo desktop-only"><a href="/"><img src="images/logo.png" alt="Jolilook" /></a>
+                <div class="header-logo desktop-only"><a href="/"><img src="<?=Yii::$app->homeUrl?>images/logo.png" alt="Jolilook" /></a>
                 </div>
                 <nav id="main-nav" class="menu-holder">
                     <div id="slideout-header" class="nav-header mobile-only">
-                      <a href="#" class="back-icon js-slide"><img src="images/icon-back.svg" alt="Back" /></a>
+                      <a href="#" class="back-icon js-slide"><img src="<?=Yii::$app->homeUrl?>images/icon-back.svg" alt="Back" /></a>
                       <h2 class="menu-title"></h2>
-                      <a href="#" class="js-close close-icon right"><img src="images/icon-menu.svg" alt="Close menu" /></a>
+                      <a href="#" class="js-close close-icon right"><img src="<?=Yii::$app->homeUrl?>images/icon-menu.svg" alt="Close menu" /></a>
                   </div>
                   <ul id="menu-categories" class="menu-list slideout" data-menutitle="">
                     <li class="mobile-only noborder" data-menutitle="Search">
@@ -47,13 +52,13 @@ use yii\helpers\Html;
                         <a href="user" class="boxed">Login</a>
                     </li>
                     <li id="women-li" class="hspace">
-                        <a href="index.php?r=site%2Fwomen" class="desktop-only selected">Women</a>
+<?=Html::a('Women', Url::to(['site/women'], true), ['class' => 'desktop-only selected'])?>
                         <a href="#women" class="mobile-only js-slide">Women</a>
                         <div id="women" class="slideout" data-menutitle="Women">
                             <ul id="women_sub_nav">
                                 <li data-menutitle="Women - Eyeglasses" >
                                     <a href="/eyeglasses/women">
-                                    <img src="images/collections/women/emily-luciano/menu_eyeglasses.jpg" class="desktop-only" alt="" />
+                                    <img src="<?=Yii::$app->homeUrl?>images/collections/women/emily-luciano/menu_eyeglasses.jpg" class="desktop-only" alt="" />
                                     <em class="desktop-only">see</em>eyeglasses
                                     </a>
                                     <div id="mobile_sub_nav_container_women_eyeglasses" class="slideout mobile-only" data-menutitle="Eyeglasses">
@@ -69,7 +74,7 @@ use yii\helpers\Html;
                                 </li>
                       <li data-menutitle="Women - Sunglasses" >
                           <a href="/sunglasses/women">
-                            <img src="images/menu_sunglasses.jpg" class="desktop-only" alt="" />
+                            <img src="<?=Yii::$app->homeUrl?>images/menu_sunglasses.jpg" class="desktop-only" alt="" />
                             <em class="desktop-only">see</em>sunglasses
                         </a>
                         <div id="mobile_sub_nav_container_women_sunglasses" class="slideout mobile-only" data-menutitle="Sunglasses">
@@ -85,7 +90,7 @@ use yii\helpers\Html;
                   </li>
                   <li data-menutitle="Women - Accessories"  class="desktop-only">
                       <a href="/accessories/women">
-                        <img src="images/menu/women/menu_accessories.jpg" class="desktop-only" alt="" />
+                        <img src="<?=Yii::$app->homeUrl?>images/menu/women/menu_accessories.jpg" class="desktop-only" alt="" />
                         <em class="desktop-only">see</em>Accessories
                     </a>
                     <div id="" class="slideout mobile-only" data-menutitle="">
@@ -95,7 +100,7 @@ use yii\helpers\Html;
                 </li>
                 <li data-menutitle="Women - our bestsellers"  class="desktop-only">
                   <a href="/women/bestsellers">
-                    <img src="images/women/menu_bestsellers_women.jpg" class="desktop-only" alt="" />
+                    <img src="<?=Yii::$app->homeUrl?>images/women/menu_bestsellers_women.jpg" class="desktop-only" alt="" />
                     <em class="desktop-only">shop</em>our bestsellers
                 </a>
                 <div id="" class="slideout mobile-only" data-menutitle="">
@@ -108,13 +113,13 @@ use yii\helpers\Html;
 </li>
 
 <li id="men-li">
-    <a href="index.php?r=site%2Fmen" class="desktop-only ">Men</a>
+    <a href="<?=Yii::$app->homeUrl?>site/men" class="desktop-only ">Men</a>
     <a href="#men" class="mobile-only js-slide">Men</a>
     <div id="men" class="slideout" data-menutitle="Men">
       <ul id="men_sub_nav">
        <li data-menutitle="Men - Eyeglasses">
         <a href="/eyeglasses/men">
-          <img src="images/collections/men/studio/homepage/genderless/menu_studio_eyeglasses.jpg" class="desktop-only" alt="" />
+          <img src="<?=Yii::$app->homeUrl?>images/collections/men/studio/homepage/genderless/menu_studio_eyeglasses.jpg" class="desktop-only" alt="" />
           <em class="desktop-only">see</em>eyeglasses
       </a>
       <div id="mobile_sub_nav_container_men_eyeglasses" class="slideout mobile-only" data-menutitle="Eyeglasses">
@@ -130,7 +135,7 @@ use yii\helpers\Html;
 </li>
 <li data-menutitle="Men - Sunglasses">
     <a href="/sunglasses/men">
-      <img src="images/collections/men/studio/homepage/genderless/menu_studio_sunglasses.jpg" class="desktop-only" alt="" />
+      <img src="<?=Yii::$app->homeUrl?>images/collections/men/studio/homepage/genderless/menu_studio_sunglasses.jpg" class="desktop-only" alt="" />
       <em class="desktop-only">see</em>sunglasses
   </a>
   <div id="mobile_sub_nav_container_men_sunglasses" class="slideout mobile-only" data-menutitle="Sunglasses">
@@ -146,7 +151,7 @@ use yii\helpers\Html;
 </li>
 <li data-menutitle="Men - Accessories" class="desktop-only">
     <a href="/accessories/men">
-      <img src="images/menu/men/menu_accessories.jpg" class="desktop-only" alt="" />
+      <img src="<?=Yii::$app->homeUrl?>images/menu/men/menu_accessories.jpg" class="desktop-only" alt="" />
       <em class="desktop-only">see</em>Accessories
   </a>
   <div id="" class="slideout mobile-only" data-menutitle="">
@@ -156,7 +161,7 @@ use yii\helpers\Html;
 </li>
 <li data-menutitle="Men - our bestsellers" class="desktop-only">
     <a href="/men/bestsellers">
-      <img src="images/men/menu_bestsellers_men2.jpg" class="desktop-only" alt="" />
+      <img src="<?=Yii::$app->homeUrl?>images/men/menu_bestsellers_men2.jpg" class="desktop-only" alt="" />
       <em class="desktop-only">shop</em>our bestsellers
   </a>
   <div id="" class="slideout mobile-only" data-menutitle="">
@@ -173,25 +178,25 @@ use yii\helpers\Html;
     <ul id="collab_sub_nav">
       <li data-menutitle="Collections - Emily Luciano">
         <a href="/women/collection/emily-luciano">
-          <img src="images/collections/women/emily-luciano/menu_collection.jpg" class="desktop-only" alt="" />
+          <img src="<?=Yii::$app->homeUrl?>images/collections/women/emily-luciano/menu_collection.jpg" class="desktop-only" alt="" />
           <em class="desktop-only">view</em>Emily Luciano
       </a>
   </li>
   <li data-menutitle="Collections - Luxe Essential">
     <a href="/women/collection/luxe-essential">
-      <img src="images/collections/luxe-essential/menu_collection.jpg" class="desktop-only" alt="" />
+      <img src="<?=Yii::$app->homeUrl?>images/collections/luxe-essential/menu_collection.jpg" class="desktop-only" alt="" />
       <em class="desktop-only">view</em>Luxe Essential
   </a>
 </li>
 <li data-menutitle="Collections - Mariper Morin">
     <a href="/women/collection/maripier-morin">
-      <img src="images/menu/collaborations/mpmorin_menu.jpg" class="desktop-only" alt="" />
+      <img src="<?=Yii::$app->homeUrl?>images/menu/collaborations/mpmorin_menu.jpg" class="desktop-only" alt="" />
       <em class="desktop-only">view</em>Mariper Morin
   </a>
 </li>
 <li data-menutitle="Collections - All collections">
     <a href="/women/collection/all">
-      <img src="images/collections/quartz/quartz_menu.jpg" class="desktop-only" alt="" />
+      <img src="<?=Yii::$app->homeUrl?>images/collections/quartz/quartz_menu.jpg" class="desktop-only" alt="" />
       <em class="desktop-only">view</em>All collections
   </a>
 </li>
@@ -204,25 +209,25 @@ use yii\helpers\Html;
     <ul id="tryon_sub_nav">
       <li data-menutitle="Try on - Virtual try on">
         <a href="/virtual-try">
-          <img src="images/menu/menu_virtualmirror.jpg" class="desktop-only" alt="" />
+          <img src="<?=Yii::$app->homeUrl?>images/menu/menu_virtualmirror.jpg" class="desktop-only" alt="" />
           <em class="desktop-only">do the</em>virtual try on
       </a>
   </li>
   <li data-menutitle="Try on - Your face shape">
     <a href="/faceshape">
-      <img src="images/menu/menu_faceshape.jpg" class="desktop-only" alt="" />
+      <img src="<?=Yii::$app->homeUrl?>images/menu/menu_faceshape.jpg" class="desktop-only" alt="" />
       <em class="desktop-only">shop for</em>your face shape
   </a>
 </li>
 <li data-menutitle="Try on - An Appointment">
     <a href="/rdv">
-      <img src="images/menu/menuhelp_appointment2.jpg" class="desktop-only" alt="" />
+      <img src="<?=Yii::$app->homeUrl?>images/menu/menuhelp_appointment2.jpg" class="desktop-only" alt="" />
       <em class="desktop-only">book</em>An Appointment
   </a>
 </li>
 <li data-menutitle="Try on - The perfct fit">
     <a href="/perfect-fit">
-      <img src="images/perfectfit_menu.jpg" class="desktop-only" alt="" />
+      <img src="<?=Yii::$app->homeUrl?>images/perfectfit_menu.jpg" class="desktop-only" alt="" />
       <em class="desktop-only">get</em>the perfect fit
   </a>
 </li>
@@ -235,13 +240,13 @@ use yii\helpers\Html;
     <ul>
       <li data-menutitle="Help - Contact us">
         <a href="/contact#main" class="faq">
-          <img class="desktop-only" src="images/menu/menuhelp_prescription.jpg" alt="" />
+          <img class="desktop-only" src="<?=Yii::$app->homeUrl?>images/menu/menuhelp_prescription.jpg" alt="" />
           <span>Contact us</span>
       </a>
   </li>
   <li data-menutitle="Help - Faqs">
     <a href="/contact#main" class="faq">
-      <img class="desktop-only" src="images/menu/menuhelp_faq.jpg" alt="" />
+      <img class="desktop-only" src="<?=Yii::$app->homeUrl?>images/menu/menuhelp_faq.jpg" alt="" />
       <span>Read the <strong>FAQ</strong></span>
   </a>
 </li>
@@ -268,14 +273,14 @@ use yii\helpers\Html;
 <ul id="menu-account" class="desktop-only">
     <li data-menutitle="Search"><a id="search-desktop_link" href="#search, #search-field" class="js-open">Search</a></li>
     <li data-menutitle="Login">
-      <a href="index.php?r=site%2Fuser">Login</a>
+      <a href="<?=Yii::$app->homeUrl?>site/user">Login</a>
   </li>
   <li data-menutitle="My bag" class="bag">
       <a id="cart-desktop_link" href="#bag-items" class="js-slide">
         <span class="invisible">My bag</span>
         <div class="bag-icon">
-          <img src="images/icon-bag.svg" class="mobile-only" alt="Open bag" />
-          <img src="images/icon-bag.png" class="mobile-hide" alt="Open bag" />
+          <img src="<?=Yii::$app->homeUrl?>images/icon-bag.svg" class="mobile-only" alt="Open bag" />
+          <img src="<?=Yii::$app->homeUrl?>images/icon-bag.png" class="mobile-hide" alt="Open bag" />
           <span class="bag_number_of_items">0</span>
       </div>
   </a>
@@ -287,7 +292,7 @@ use yii\helpers\Html;
 <div id="sub-nav">
     <div id="shopping-cart" class="menu-holder cart">
         <div id="tablet-nav-header" class="nav-header">
-            <a href="#" class="js-close close-icon x"><img src="images/icon-close.svg" alt="Close menu" /></a>
+            <a href="#" class="js-close close-icon x"><img src="<?=Yii::$app->homeUrl?>images/icon-close.svg" alt="Close menu" /></a>
         </div>
         <div id="bag-items" class="slideout content">
             <h2 class="h1">My bag</h2>
@@ -325,7 +330,7 @@ use yii\helpers\Html;
                     <p class="coupon">
                         <a class="remove-coupon-code" data-code="" href="#">
                         Coupon <span class="uppercase"></span>
-                        Applied<img src="images/icon-close.svg" alt="remove coupon"/>
+                        Applied<img src="<?=Yii::$app->homeUrl?>images/icon-close.svg" alt="remove coupon"/>
                         </a>
                     </p>
                 </div>
@@ -345,7 +350,7 @@ use yii\helpers\Html;
                     <div id="search-suggest" class="text-center">cateye</div>
                     <input type="text" name="search-kwd" id="search-kwd" class="text-center" placeholder="Search" />
                 </div>
-                <a href="#" class="js-close close-icon"><img src="images/icon-close.svg" alt="Close menu" /></a>
+                <a href="#" class="js-close close-icon"><img src="<?=Yii::$app->homeUrl?>images/icon-close.svg" alt="Close menu" /></a>
             </form>
         </div>
     </div>
@@ -358,7 +363,7 @@ use yii\helpers\Html;
         <div id="footer_container">
           <div class="row">
             <div class="footer-infos col-xs-12 col-sm-4 col-lg-2">
-              <div class="footer-logo"><a href="/"><img src="images/jolilook.png" alt="Jolilook" /></a>
+              <div class="footer-logo"><a href="/"><img src="<?=Yii::$app->homeUrl?>images/jolilook.png" alt="Jolilook" /></a>
               </div>
               <a href="/contact">Contact us</a>
               <a href="mailto:support@Jolilook.com">support@Jolilook.com</a>
@@ -366,11 +371,11 @@ use yii\helpers\Html;
             </div>
             <div class="col-xs-12 col-sm-4 col-lg-4 col-lg-push-2">
               <div class="social-icons">
-                <a href="//www.facebook.com/Jolilook.eyewear" target="_blank"><img src="images/icon_fb.png" alt="Facebook JoliLook" /></a>
-                <a href="//twitter.com/JoliLook" target="_blank"><img src="images/icon_tw.png" alt="Twitter JoliLook" /></a>
-                <a href="//instagram.com/Jolilook" target="_blank"><img src="images/icon_insta.png" alt="Instagram JoliLook" /></a>
-                <a href="//pinterest.com/Jolilook/" target="_blank"><img src="images/icon_pin.png" alt="Pinterest JoliLook" /></a>
-                <a href="images/snap_chat_pop_up.jpg" target="_blank" class="popup"><img src="images/snapchat_icon.png" alt="Snapchat JoliLook" /></a>
+                <a href="//www.facebook.com/Jolilook.eyewear" target="_blank"><img src="<?=Yii::$app->homeUrl?>images/icon_fb.png" alt="Facebook JoliLook" /></a>
+                <a href="//twitter.com/JoliLook" target="_blank"><img src="<?=Yii::$app->homeUrl?>images/icon_tw.png" alt="Twitter JoliLook" /></a>
+                <a href="//instagram.com/Jolilook" target="_blank"><img src="<?=Yii::$app->homeUrl?>images/icon_insta.png" alt="Instagram JoliLook" /></a>
+                <a href="//pinterest.com/Jolilook/" target="_blank"><img src="<?=Yii::$app->homeUrl?>images/icon_pin.png" alt="Pinterest JoliLook" /></a>
+                <a href="images/snap_chat_pop_up.jpg" target="_blank" class="popup"><img src="<?=Yii::$app->homeUrl?>images/snapchat_icon.png" alt="Snapchat JoliLook" /></a>
               </div>
               <nav class="footer-menu">
                 <div class="row">
@@ -404,7 +409,7 @@ use yii\helpers\Html;
           <input type="hidden" name="origin" id="origin" value="web" />
           <div class="subscribe-form-content">
             <a href="#" class="js-close close-icon x invert">
-            <img src="images/icon-close.svg" alt="Close menu" /></a>
+            <img src="<?=Yii::$app->homeUrl?>images/icon-close.svg" alt="Close menu" /></a>
             <div class="grid grid-vcenter">
               <div class="col-xs-12 col-md-6">
                 <h2 class="h2">Get the newsletter</h2>
@@ -435,7 +440,7 @@ use yii\helpers\Html;
       </div>
         <div class="newsletter-mobile-only mobile-only" data-is-logged-in="">
         <p>Subscribe to our newsletter
-        <img src="images/newsletter_arrow.jpg" alt="Arrow right"></p>
+        <img src="<?=Yii::$app->homeUrl?>images/newsletter_arrow.jpg" alt="Arrow right"></p>
         <form class="newsletter-form">
         <input class="newsletter-email" type="email" name="newsletter-email" placeholder="Email">
         <input class="newsletter-submit" type="submit" name="newsletter-submit" value="OK"/>

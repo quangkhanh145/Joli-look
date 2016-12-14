@@ -42,10 +42,10 @@ $this->title = 'Mắt kính thời trang online';
     </style>
     <div class="promo main-promo main-promo--split">
      <div class="table">
-      <div class="table-cell" style="background-image: url(images/genderless/homepage/Homepage_split_studio.jpg);" data-banner-href="/women" data-banner-title='see women'>
+      <div class="table-cell" style="background-image: url(<?=Yii::$app->homeUrl?>images/genderless/homepage/Homepage_split_studio.jpg);" data-banner-href="/women" data-banner-title='see women'>
         <a href="/women" class="button dark">see women</a>
       </div>
-      <div class="table-cell" style="background-image: url(images/collections/men/studio/homepage/genderless/Homepage_split_studio.jpg);" data-banner-href="/men" data-banner-title='see men'>
+      <div class="table-cell" style="background-image: url(<?=Yii::$app->homeUrl?>images/collections/men/studio/homepage/genderless/Homepage_split_studio.jpg);" data-banner-href="/men" data-banner-title='see men'>
         <a href="/men" class="button dark">see men</a>
       </div>
     </div>
@@ -59,7 +59,7 @@ $this->title = 'Mắt kính thời trang online';
         <ul class="nobullet">
           <li>
             <a href="/eyeglasses/women/glory/rose">
-              <img src="images/glorycroisees.jpg" alt=""/>
+              <img src="<?=Yii::$app->homeUrl?>images/glorycroisees.jpg" alt=""/>
             </a>
             <a href="/eyeglasses/women">
               <span class="front-frames-title">Shop women's</span>
@@ -72,7 +72,7 @@ $this->title = 'Mắt kính thời trang online';
         <ul class="nobullet">
           <li>
             <a href="/sunglasses/men/atwater/bark">
-              <img src="images/front-frames/men/Atwater-Bark.jpg" alt=""/>
+              <img src="<?=Yii::$app->homeUrl?>images/front-frames/men/Atwater-Bark.jpg" alt=""/>
             </a>
             <a href="/sunglasses/men">
               <span class="front-frames-title">Shop men's</span>
@@ -103,8 +103,8 @@ $this->title = 'Mắt kính thời trang online';
 
 </style>
 
-<div class="promo promo-3" style="background-image: url('images/collections/women/emily-luciano/Bandeau_EmilyLuciano_1200x475.jpg'); cursor: pointer;" data-banner-href="/women/collection/emily-luciano" data-banner-title="Emily Luciano X BONLOOK">
-    <img src="images/collections/women/emily-luciano/Bandeau_EmilyLuciano_1200x475.jpg" class="tablet-hide desktop-hide" />
+<div class="promo promo-3" style="background-image: url('<?=Yii::$app->homeUrl?>images/collections/women/emily-luciano/Bandeau_EmilyLuciano_1200x475.jpg'); cursor: pointer;" data-banner-href="/women/collection/emily-luciano" data-banner-title="Emily Luciano X BONLOOK">
+    <img src="<?=Yii::$app->homeUrl?>images/collections/women/emily-luciano/Bandeau_EmilyLuciano_1200x475.jpg" class="tablet-hide desktop-hide" />
     <div class="table promo-text text-center text">
         <div class="table-cell">
             <h3 class="h1">Emily Luciano X BONLOOK</h3>
@@ -135,8 +135,8 @@ $this->title = 'Mắt kính thời trang online';
 
 </style>
 
-<div class="promo promo-men-2" style="background-image: url('images/collections/men/studio/homepage/genderless/studio_bandeau1.jpg'); cursor: pointer;" data-banner-href="/men/collection/studio" data-banner-title="Studio collection">
-    <img src="images/collections/men/studio/homepage/genderless/studio_bandeau1.jpg" class="tablet-hide desktop-hide" />
+<div class="promo promo-men-2" style="background-image: url('<?=Yii::$app->homeUrl?>images/collections/men/studio/homepage/genderless/studio_bandeau1.jpg'); cursor: pointer;" data-banner-href="/men/collection/studio" data-banner-title="Studio collection">
+    <img src="<?=Yii::$app->homeUrl?>images/collections/men/studio/homepage/genderless/studio_bandeau1.jpg" class="tablet-hide desktop-hide" />
     <div class="table promo-text text-center right">
         <div class="table-cell">
             <h3 class="h1">Studio collection</h3>
@@ -167,8 +167,8 @@ $this->title = 'Mắt kính thời trang online';
 
 </style>
 
-<div class="promo promo-women-1" style="background-image: url('images/collections/luxe-essential/luxeessential_bandeau2.jpg'); cursor: pointer;" data-banner-href="/women/collection/luxe-essential" data-banner-title="LUXE ESSENTIAL">
-    <img src="images/collections/luxe-essential/luxeessential_bandeau2.jpg" class="tablet-hide desktop-hide" />
+<div class="promo promo-women-1" style="background-image: url('<?=Yii::$app->homeUrl?>images/collections/luxe-essential/luxeessential_bandeau2.jpg'); cursor: pointer;" data-banner-href="/women/collection/luxe-essential" data-banner-title="LUXE ESSENTIAL">
+    <img src="<?=Yii::$app->homeUrl?>images/collections/luxe-essential/luxeessential_bandeau2.jpg" class="tablet-hide desktop-hide" />
     <div class="table promo-text text-center left">
         <div class="table-cell">
             <h3 class="h1">LUXE ESSENTIAL</h3>
@@ -195,19 +195,19 @@ $this->title = 'Mắt kính thời trang online';
   <div class="table content-holder large">
     <div class="table-cell left">
       <a href="/contact">
-        <img src="images/footer_contactus.jpg" alt="Contact us" />
+        <img src="<?=Yii::$app->homeUrl?>images/footer_contactus.jpg" alt="Contact us" />
         <span id="discover_left_block">Contact us</span>
       </a>
     </div>
     <div class="table-cell left">
       <a href="/instagram">
-        <img src="images/footer_instagram.jpg" alt="#JOLILOOK" />
+        <img src="<?=Yii::$app->homeUrl?>images/footer_instagram.jpg" alt="#JOLILOOK" />
         <span id="discover_center_block">Shop our<br/> Instagram</span>
       </a>
     </div>
     <div class="table-cell left cellphone-hide">
       <a href="/careers">
-        <img src="images/footer_careers.jpg" alt="Careers" />
+        <img src="<?=Yii::$app->homeUrl?>images/footer_careers.jpg" alt="Careers" />
         <span id="discover_right_block">Careers</span>
       </a>
     </div>
