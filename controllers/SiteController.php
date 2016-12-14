@@ -126,7 +126,9 @@ class SiteController extends Controller {
 		}
 
 		$model = new UsersForm();
-		if ($model->load(Yii::$app->request->post()) && $model->login()) {
+		$model['email'] = Yii::$app->request->post()['email'];
+		$model['password'] = Yii::$app->request->post()['password'];
+		if ($model->login()) {
 			return $this->goBack();
 		}
 		return $this->render('user', [

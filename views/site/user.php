@@ -34,7 +34,7 @@ $form = ActiveForm::begin(['id' => 'login-form', 'options' => [
                     <input type="hidden" name="redirect" value="/user"/>
                     <!-- <input type="email" name="username" placeholder="Email address" />
                     <input type="password" name="password" placeholder="Password" /> -->
-                    <?=$form->field($model, 'email', ['inputOptions' => ['placeholder' => 'Email address', 'type' => 'email', 'name' => 'username', 'id' => false, 'class' => false]])->label(false)->textInput()?>
+                    <?=$form->field($model, 'email', ['inputOptions' => ['placeholder' => 'Email address', 'type' => 'email', 'name' => 'email', 'id' => false, 'class' => false]])->label(false)->textInput()?>
                     <?=$form->field($model, 'password', ['inputOptions' => ['placeholder' => 'Password', 'type' => 'password', 'name' => 'password', 'id' => false, 'class' => false]])->label(false)->passwordInput()?>
                     <div class="grid grid-2-cols grid-baseline">
                         <div class="text-left">

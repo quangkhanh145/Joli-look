@@ -125,8 +125,10 @@ class SiteController extends Controller {
 			return $this->goHome();
 		}
 
-		$model = new UsersForm();
-		if ($model->load(Yii::$app->request->post()) && $model->login()) {
+		$model             = new UsersForm();
+		$model['email']    = Yii::$app->request->post()['email'];
+		$model['password'] = Yii::$app->request->post()['password'];
+		if ($model->login()) {
 			return $this->goBack();
 		}
 		return $this->render('user', [
