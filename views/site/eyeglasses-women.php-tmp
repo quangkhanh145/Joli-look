@@ -95,7 +95,7 @@ $this->title = 'Mắt kính thời trang nữ';
                 }
             }
         </style>
-        <img src="images/women/catalogpage/eyeglasses/eyeglasses_women.jpg" alt="" class="banner-image-getter">
+        <img src="<?=Yii::$app->homeUrl?>images/women/catalogpage/eyeglasses/eyeglasses_women.jpg" alt="" class="banner-image-getter">
         <div class="text">
             <h1 class="h1 upper" style="font-weight: ">women's eyeglasses</h1>
             <h4></h4>
@@ -171,9 +171,9 @@ $this->title = 'Mắt kính thời trang nữ';
     <div class="page-content">
         <div id="catalog-nav">
             <div class="desktop-hide grid grid-vcenter nav-filters">
-                <a href="#catalog-listing" data-gridtype="grid-2-cols" class="grayed-out selected"><img src='images/view-grid-two-columns.svg' alt="Two columns" /></a>
-                <a href="#catalog-listing" data-gridtype="grid-list" class="grayed-out"><img src='images/view-list.svg' alt="List" /></a>
-                <a href="#catalog-listing" data-gridtype="grid-single" class="grayed-out tablet-hide"><img src='images/view-single.svg' alt="Single" /></a>
+                <a href="#catalog-listing" data-gridtype="grid-2-cols" class="grayed-out selected"><img src='<?=Yii::$app->homeUrl?>images/view-grid-two-columns.svg' alt="Two columns" /></a>
+                <a href="#catalog-listing" data-gridtype="grid-list" class="grayed-out"><img src='<?=Yii::$app->homeUrl?>images/view-list.svg' alt="List" /></a>
+                <a href="#catalog-listing" data-gridtype="grid-single" class="grayed-out tablet-hide"><img src='<?=Yii::$app->homeUrl?>images/view-single.svg' alt="Single" /></a>
                 <a href="#catalog-menu" class="js-submenu more-icon filterby">Filter by</a>
             </div>
             <div class="grid desktop-only nav-filters">
@@ -191,7 +191,7 @@ $this->title = 'Mắt kính thời trang nữ';
             </div>
             <div id="catalog-menu" class="menu-inline menu-list submenu hide">
                 <div class="submenu-header desktop-hide">
-                    <a href="#catalog-menu" class="js-submenu back-icon"><img src='images/icon-back.svg' alt="Back" /></a>
+                    <a href="#catalog-menu" class="js-submenu back-icon"><img src='<?=Yii::$app->homeUrl?>images/icon-back.svg' alt="Back" /></a>
                     <h2 class="menu-title"></h2>
                 </div>
                 <ul>
@@ -298,8 +298,8 @@ $this->title = 'Mắt kính thời trang nữ';
         </div>
         <div class="view-as desktop-only">
             <span>View as</span>
-            <a href="#catalog-listing" data-gridtype="grid-2-cols" class="grayed-out selected"><img src='images/view-two-columns.svg' alt="Two columns" /></a>
-            <a href="#catalog-listing" data-gridtype="grid-4-cols" class="grayed-out"><img src='images/view-four-columns.svg' alt="Four columns" /></a>
+            <a href="#catalog-listing" data-gridtype="grid-2-cols" class="grayed-out selected"><img src='<?=Yii::$app->homeUrl?>images/view-two-columns.svg' alt="Two columns" /></a>
+            <a href="#catalog-listing" data-gridtype="grid-4-cols" class="grayed-out"><img src='<?=Yii::$app->homeUrl?>images/view-four-columns.svg' alt="Four columns" /></a>
         </div>
         <ul id="catalog-listing" class="grid products-list grid-2-cols nobullet">
 

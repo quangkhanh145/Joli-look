@@ -69,7 +69,7 @@ use yii\helpers\Url;
                         <div id="women" class="slideout" data-menutitle="Women">
                             <ul id="women_sub_nav">
                                 <li data-menutitle="Women - Eyeglasses" >
-                                    <a href="/eyeglasses/women">
+                                    <a href="<?=Yii::$app->homeUrl?>site/eyeglasses-women">
                                     <img src="<?=Yii::$app->homeUrl?>images/collections/women/emily-luciano/menu_eyeglasses.jpg" class="desktop-only" alt="" />
                                     <em class="desktop-only">see</em>eyeglasses
                                     </a>
