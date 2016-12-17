@@ -293,7 +293,7 @@ if (Yii::$app->user->isGuest) {
   <a href="/user" class="select-icon">My account</a>
   <ul>
   <a href="/user/orders">My orders</a>
-  <a href="/user">My profile</a>
+  <a href="' . Yii::$app->homeUrl . 'site/myaccount">My profile</a>
   <a href="/user/wishlist">My Wishlist</a>
   <a href="' . Yii::$app->homeUrl . 'site/logout">Log out</a>
   </ul>

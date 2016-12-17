@@ -3,7 +3,8 @@
 namespace app\controllers;
 
 use app\models\ContactForm;
-use app\models\UsersForm;
+use app\models\LoginForm;
+use app\models\SignupForm;
 use Yii;
 use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
@@ -126,7 +127,7 @@ class SiteController extends Controller {
 			return $this->goHome();
 		}
 
-		$model = new UsersForm();
+		$model = new LoginForm();
 		$model['email'] = Yii::$app->request->post()['email'];
 		$model['password'] = Yii::$app->request->post()['password'];
 		if ($model->login()) {
@@ -141,7 +142,7 @@ class SiteController extends Controller {
 			return $this->goHome();
 		}
 
-		$model = new UsersForm();
+		$model = new LoginForm();
 		$model['email'] = Yii::$app->request->post()['email'];
 		$model['password'] = Yii::$app->request->post()['password'];
 		if ($model->login()) {
@@ -153,5 +154,22 @@ class SiteController extends Controller {
 	}
 	public function actionEyeglassesWomen() {
 		return $this->render('eyeglasses-women');
+	}
+	public function actionCreate() {
+		$model = new SignupForm();
+		$model['email'] = Yii::$app->request->post()['email'];
+		$model['password'] = Yii::$app->request->post()['password'];
+		if ($model->signup()) {
+			if ($model->login()) {
+				return $this->render('myaccount');
+			}
+		}
+		return $this->render('create');
+	}
+	public function actionMyaccount() {
+		if (Yii::$app->user->isGuest) {
+			return $this->goHome();
+		}
+		return $this->render('myaccount');
 	}
 }

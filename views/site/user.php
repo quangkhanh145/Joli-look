@@ -31,7 +31,6 @@ $form = ActiveForm::begin(['id' => 'login-form', 'options' => [
 	]]);
 ?>
                     <h3 class="h6 uppercase">Log in to your account</h3>
-                    <input type="hidden" name="redirect" value="/user"/>
                     <?=$form->field($model, 'email', ['inputOptions' => ['placeholder' => 'Email address', 'type' => 'email', 'name' => 'email', 'id' => false, 'class' => false]])->label(false)->textInput()?>
                     <?=$form->field($model, 'password', ['inputOptions' => ['placeholder' => 'Password', 'type' => 'password', 'name' => 'password', 'id' => false, 'class' => false]])->label(false)->passwordInput()?>
                     <div class="grid grid-2-cols grid-baseline">
@@ -45,7 +44,7 @@ $form = ActiveForm::begin(['id' => 'login-form', 'options' => [
                 </div>
             </div>
             <div class="w-50 rel">
-                <a href="/user/create?redirect=/user" class="box button-box uppercase"><span>This is my first time</span></a>
+                <a href="<?=Yii::$app->homeUrl?>site/create" class="box button-box uppercase"><span>This is my first time</span></a>
             </div>
         </div>
     </div>
@@ -54,7 +53,7 @@ $form = ActiveForm::begin(['id' => 'login-form', 'options' => [
         <div class="content-holder bordered">
             <div class="h-space">
                 <h3 class="h3">Sign in</h3><a class="button full dark js" href="<?=Yii::$app->homeUrl?>site/usermobile">Log in to your account</a>
-                <a class="button full js" href="/user/create?redirect=/user">This is my first time</a>
+                <a class="button full js" href="<?=Yii::$app->homeUrl?>site/create">This is my first time</a>
             </div>
         </div>
     </div>
