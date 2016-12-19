@@ -1,5 +1,5 @@
 <?
-$this->title = 'Mắt kính thời trang nữ';
+$this->title = 'Mắt kính thời trang nam';
 ?>
 <div id="main"  class=""  >
 <noscript>

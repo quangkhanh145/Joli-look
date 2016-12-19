@@ -5,7 +5,9 @@
 
 use yii\helpers\Html;
 use yii\helpers\Url;
+/*use app\assets\AppAsset;
 
+AppAsset::register($this);*/
 ?>
 <?php $this->beginPage()?>
 <!DOCTYPE html>
@@ -13,12 +15,16 @@ use yii\helpers\Url;
 <head>
     <meta charset="<?=Yii::$app->charset?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?=Html::csrfMetaTags()?>
     <title><?=Html::encode($this->title)?></title>
     <link href="icon.png" data-menuid="shortcut icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sacramento" type="text/css">
-    <?=Html::cssFile(Url::to(['css/index.css']))?>
+
+    <?=Html::cssFile(Url::to(['css/index.css']))?>   
     <?=Html::jsFile(Url::to(['js/index.js']))?>
+
     <?php $this->head()?>
+   
 </head>
 <body>
     <?php $this->beginBody()?>
@@ -86,7 +92,7 @@ use yii\helpers\Url;
                                     </div>
                                 </li>
                       <li data-menutitle="Women - Sunglasses" >
-                          <a href="/sunglasses/women">
+                          <a href="<?=Yii::$app->homeUrl?>site/sungglasses-women">
                             <img src="<?=Yii::$app->homeUrl?>images/menu_sunglasses.jpg" class="desktop-only" alt="" />
                             <em class="desktop-only">see</em>sunglasses
                         </a>
@@ -131,7 +137,7 @@ use yii\helpers\Url;
     <div id="men" class="slideout" data-menutitle="Men">
       <ul id="men_sub_nav">
        <li data-menutitle="Men - Eyeglasses">
-        <a href="/eyeglasses/men">
+        <a href="<?=Yii::$app->homeUrl?>site/eyeglasses-men">
           <img src="<?=Yii::$app->homeUrl?>images/collections/men/studio/homepage/genderless/menu_studio_eyeglasses.jpg" class="desktop-only" alt="" />
           <em class="desktop-only">see</em>eyeglasses
       </a>
@@ -147,7 +153,7 @@ use yii\helpers\Url;
     </div>
 </li>
 <li data-menutitle="Men - Sunglasses">
-    <a href="/sunglasses/men">
+    <a href="<?=Yii::$app->homeUrl?>site/sunglasses-men">
       <img src="<?=Yii::$app->homeUrl?>images/collections/men/studio/homepage/genderless/menu_studio_sunglasses.jpg" class="desktop-only" alt="" />
       <em class="desktop-only">see</em>sunglasses
   </a>
@@ -385,7 +391,9 @@ if (Yii::$app->user->isGuest) {
 </div>
 </div>
 </header>
+  <div class="container">
  <?=$content?>
+  </div>
 <footer>
 <div class="wrapper">
         <div id="footer_container">
@@ -475,9 +483,10 @@ if (Yii::$app->user->isGuest) {
         </form>
         </div>
   </div>
-            </footer>
-
-            <?php $this->endBody()?>
+        </footer>
+             
+        <?php $this->endBody()?>
         </body>
+
         </html>
-        <?php $this->endPage()?>
+      <?php $this->endPage()?>

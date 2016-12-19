@@ -9,6 +9,8 @@ use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 use yii\helpers\Url;
 use yii\web\Controller;
+use app\models\Products;
+use yii\data\Pagination;
 
 class SiteController extends Controller {
 	/**
@@ -151,7 +153,81 @@ class SiteController extends Controller {
 			'model' => $model,
 		]);
 	}
-	public function actionEyeglassesWomen() {
-		return $this->render('eyeglasses-women');
-	}
+
+	public function actionEyeglassesWomen()
+    {
+
+        $query = Products::find();
+        $pagination = new Pagination([
+            'defaultPageSize' => 5,
+            'totalCount' => $query->count(),
+        ]);
+
+        $countries = $query->where(['category'=>eyeglwomen])
+            ->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
+
+        return $this->render('eyeglasses-women', [
+            'countries' => $countries,
+            'pagination' => $pagination,
+        ]);
+    }    
+    public function actionEyeglassesMen()
+    {
+
+        $query = Products::find();
+        $pagination = new Pagination([
+            'defaultPageSize' => 5,
+            'totalCount' => $query->count(),
+        ]);
+
+        $countries = $query->where(['category'=>eyeglmen])
+            ->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
+
+        return $this->render('eyeglasses-men', [
+            'countries' => $countries,
+            'pagination' => $pagination,
+        ]);
+    }
+    public function actionSungglassesMen()
+    {
+
+        $query = Products::find();
+        $pagination = new Pagination([
+            'defaultPageSize' => 5,
+            'totalCount' => $query->count(),
+        ]);
+
+        $countries = $query->where(['category'=>sungglmen])
+            ->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
+
+        return $this->render('sungglasses-men', [
+            'countries' => $countries,
+            'pagination' => $pagination,
+        ]);
+    }
+    public function actionSungglassesWomen()
+    {
+
+        $query = Products::find();
+        $pagination = new Pagination([
+            'defaultPageSize' => 5,
+            'totalCount' => $query->count(),
+        ]);
+
+        $countries = $query->where(['category'=>sungglwomen])
+            ->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
+
+        return $this->render('sungglasses-women', [
+            'countries' => $countries,
+            'pagination' => $pagination,
+        ]);
+    }
 }

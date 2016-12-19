@@ -1,5 +1,9 @@
 <?
-$this->title = 'Mắt kính thời trang nữ';
+//$this->title = 'Mắt kính thời trang nữ';
+?>
+<?php
+use yii\helpers\Html;
+use yii\widgets\LinkPager;
 ?>
 <div id="main"  class=""  >
 <noscript>
@@ -11,6 +15,7 @@ $this->title = 'Mắt kính thời trang nữ';
 <div class="promotion">
     <div class="page-banner">
         <style>
+        	#show{display:inline-block;}
             .page-banner .text > h4
             {
                 font: none;
@@ -303,34 +308,36 @@ $this->title = 'Mắt kính thời trang nữ';
         </div>
         <ul id="catalog-listing" class="grid products-list grid-2-cols nobullet">
 
-        </ul>
-    </div>
-    <div class="row">
-      <?php foreach ($countries as $products): ?>
-          <div id="" class="col-md-6">       
-            <div class="grid-item">
-                <div class="img">
-                    <div class="main-img">                   
-                                <a href="">
-                                  <img id="img_<?=$products->id?>" src="<?= Yii::$app->homeUrl?><?=$products->image_link?>" data-discount-price="<?=$products->price?>" data-tag="" alt="" title="">
-                                </a>
-                        
-                    </div>
-                </div>
-                <div class="infos">                       
-                    <div class="product_details">
-                        <div class=" sale ">
-                            <button class="btn btn-success"type="submit" onclick="addcart(<?=$products->id?>)">Add To Cart</button></br>
-                            <!-- <div class="btn btn-danger tag">New</div> -->
-                            <h2 class="h2 subtitle"><?=$products->name?></h2>
-                            <div class="price"><?=$products->price?>đ</div>
-                            <div class="discount_price"><?=$products->price?>đ</div>
-                        </div>
-                    </div>                        
-                </div>
-            </div>
-        </div>                 
-      <?php endforeach; ?>
+        </ul> 
+        <div id="show">      
+            <?php foreach ($countries as $products): ?>
 
+            <!--<img class="col-md-4" src='<?=Yii::$app->homeUrl?><?= $products->image_link ?>'>  -->
+    
+
+    <div class="col-xs-4 col-sm-6 col-md-4" style="padding-left:5px; padding-right:5px">
+      <div class="product-box" style="border: 1px solid #c6caca; margin-bottom:15px; background-color:white;">
+        <div class="product-image">
+          <p style="position: absolute; z-index: 1; margin-top:2px; margin-left:4px">
+            <span class="label label-danger">New</span>
+          </p>
+          <center class="visible-md visible-lg"><a href="" target="_blank"><img class="img-responsive product-image-thumb" src="<?=Yii::$app->homeUrl?><?= $products->image_link ?>" style="height:260px"></a></center>
+          <center class="visible-xs visible-sm"><a href="" target="_blank"><img class="img-responsive product-image-thumb" src="<?=Yii::$app->homeUrl?><?= $products->image_link ?>" style="height:150px"></a></center>
+        </div>
+        <div class="product-offer hidden-xs hidden-sm" style="bottom:0; left:0; height:90px; width:100%; background-color:#F5F5F5; padding-left:5px; padding-right:5px; padding-top:0.5px">
+          <a href="" target="_blank"><h5 style="color:#333333; font-weight:bold"><?=$products->name?></h5></a>
+
+          <p><span class="text-danger"><strong><?=$products->price?></strong></span> | <span class="text-primary"><s><strong><?=$products->price?> ₫</strong></s></span>&nbsp;&nbsp;<button class="btn btn-danger btn-sm" type="submit" onclick="addProductToCart()"> MUA NGAY</button></p>
+
+        </div>
+        <div class="product-offer-mobile hidden-md hidden-lg" style="bottom:0; left:0; height:90px; width:100%; background-color:#F5F5F5; padding-left:5px; padding-right:5px; padding-top:0.5px">
+          <a href="http://go.masoffer.net/v1/ovwAD5HzJw5ipS7z27puMgr0Stg7J7JSi-KJ0m7zWnY/?go=https%3a%2f%2fwww.adayroi.com%2fapple-iphone-5s-16gb-bac-hang-chinh-hang-vn-a-p-WnYGM-f1-2%3fpi%3dnOb3r%26w%3damdB%26mc%3dwPa1%26utm_source%3Dmasoffer&amp;aff_sub1=1deal" target="_blank"><h5 style="color:#333333"><small><?=$products->name?></small></h5></a>
+
+          <p><span class="text-danger"><strong><small><?=$products->price?></small></strong></span> | <span class="text-primary"><s><strong><small><?=$products->price?></small></strong></s></span></p>
+        </div>
+      </div>
     </div>
+            <?php endforeach; ?>
+        </div>
+    	<?= LinkPager::widget(['pagination' => $pagination]) ?>
 </div>
