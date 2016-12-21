@@ -160,7 +160,10 @@ class SiteController extends Controller {
 		$model['email']    = Yii::$app->request->post()['email'];
 		$model['password'] = Yii::$app->request->post()['password'];
 		if ($model->signup()) {
-			if ($model->login()) {
+			$login           = new LoginForm();
+			$login->email    = $model->email;
+			$login->password = $model->password;
+			if ($login->login()) {
 				return $this->render('myaccount');
 			}
 		}

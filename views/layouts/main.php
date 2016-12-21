@@ -17,7 +17,11 @@ use yii\helpers\Url;
     <link href="icon.png" data-menuid="shortcut icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sacramento" type="text/css">
     <?=Html::cssFile(Url::to(['css/index.css']))?>
-    <?=Html::jsFile(Url::to(['js/index.js']))?>
+    <?=Html::cssFile(Url::to(['css/slick.css']))?>
+    <?=Html::jsFile(Url::to(['js/jquery-3.1.1.js']))?>
+    <?=Html::jsFile(Url::to(['js/jquery.customSelect.min.js']))?>
+    <?=Html::jsFile(Url::to(['js/slick.js']))?>
+    <?=Html::jsFile(Url::to(['js/menu.js']))?>
     <?php $this->head()?>
 </head>
 <body>

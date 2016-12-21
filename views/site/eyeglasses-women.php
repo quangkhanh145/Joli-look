@@ -302,7 +302,51 @@ $this->title = 'Mắt kính thời trang nữ';
             <a href="#catalog-listing" data-gridtype="grid-4-cols" class="grayed-out"><img src='<?=Yii::$app->homeUrl?>images/view-four-columns.svg' alt="Four columns" /></a>
         </div>
         <ul id="catalog-listing" class="grid products-list grid-2-cols nobullet">
-
+            <?php foreach ($danhmuc as $d): ?>
+                <li class="grid-item">
+                <div class="img">
+                <ul class="main-img">
+                <?php foreach ($sanpham as $sp): ?>
+                    <?php if ($sp->id_loai === $d->id): ?>
+                        <li>
+                        <a href="/">
+                            <img src="<?=Yii::$app->homeUrl?><?php echo $sp->image; ?>" alt="<?php echo $sp->ten; ?>"
+                            title="<?php echo $sp->ten; ?>"/>
+                        </a>
+                        </li>
+                    <?php endif?>
+                <?php endforeach;?>
+                </ul>
+                </div>
+                <ul class="infos">
+                <li>
+                    <div class="displayGenderOptions">
+                        <ul class="product-categories">
+                            <li><a class="button"><?php echo $d->gioi_tinh; ?></a></li>
+                        </ul>
+                    </div>
+                    <ul class="product_details">
+                        <li class=" new ">
+                        <div class="tag">New</div>
+                        <h2 class="h2 subtitle"><?php echo ucfirst($d->tensp); ?></h2>
+                        <div class="price"><?php echo $d->gia_thamkhao . " VNĐ"; ?></div>
+                </li>
+                    </ul>
+                </li>
+                </ul>
+                </li>
+            <?php endforeach;?>
         </ul>
     </div>
 </div>
+<?php
+
+/* @var $this \yii\web\View */
+/* @var $content string */
+
+use yii\helpers\Html;
+use yii\helpers\Url;
+
+?>
+<?=Html::jsFile(Url::to(['js/products.js']))?>
+<?=Html::jsFile(Url::to(['js/lazy_img_loader.js']))?>
