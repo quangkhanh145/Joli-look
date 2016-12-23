@@ -128,6 +128,7 @@ CREATE TABLE `don_hang`
 	`dia_chi` VARCHAR(100),
 	`phone` VARCHAR(40),
 	`email` VARCHAR(128),
+	`tong_tien` FLOAT,
 	`status` tinyint DEFAULT 0,
 	PRIMARY KEY(ma_don_hang)
 )ENGINE=MyISAM DEFAULT CHARSET=utf8;
