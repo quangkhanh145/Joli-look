@@ -337,26 +337,26 @@ $listcart = $cart->getCart();
 if ($listcart):
 	foreach ($listcart as $item):
 	?>
-										                <li>
-										                  <a href="#">
-						                          <img src="<?=Yii::$app->homeUrl?><?php echo $item['image']; ?>" class="cart-preview"/>
-										                  </a>
-										                  <div class="cart-description">
-										                    <p>Sản phẩm<strong><?php echo $item['ten']; ?></strong></p>
-										                    <p>Màu sắc<strong><?php echo $item['mau']; ?></strong></p>
-										                    <p>Loại<strong><?php if ($item['loai_trong'] === "RX") {
+													                <li>
+													                  <a href="#">
+									                          <img src="<?=Yii::$app->homeUrl?><?php echo $item['image']; ?>" class="cart-preview"/>
+													                  </a>
+													                  <div class="cart-description">
+													                    <p>Sản phẩm<strong><?php echo $item['ten']; ?></strong></p>
+													                    <p>Màu sắc<strong><?php echo $item['mau']; ?></strong></p>
+													                    <p>Loại<strong><?php if ($item['loai_trong'] === "RX") {
 		echo "Đơn tròng";
 	} else {
 		echo "Đa tròng";
 	}
 	?></strong></p>
-										                    <p class="desktop-only"> Giá tiền <strong><?php echo $item['gia']; ?></strong></p>
-										                  </div>
-										                  <a href="#" class="bag-remove" data-id="<?php echo $item['id']; ?>" data-lens = "<?php echo $item['loai_trong']; ?>">
-										                    <img src="<?=Yii::$app->homeUrl?>images/icon-close.svg" alt="Close menu">
-										                  </a>
-										                </li>
-										              <?php endforeach;?>
+													                    <p class="desktop-only"> Giá tiền <strong><?php echo $item['gia']; ?></strong></p>
+													                  </div>
+													                  <a href="#" class="bag-remove" data-id="<?php echo $item['id']; ?>" data-lens = "<?php echo $item['loai_trong']; ?>">
+													                    <img src="<?=Yii::$app->homeUrl?>images/icon-close.svg" alt="Close menu">
+													                  </a>
+													                </li>
+													              <?php endforeach;?>
             <?php endif;?>
                 <li class="cart-notification" style="display: none">
                     <div class="cart-notification-text">
@@ -403,7 +403,7 @@ if ($listcart):
     </div>
     <div id="search">
         <div id="search-field" class="content">
-            <form id="search-form" action="/search" method="post">
+            <form id="search-form" action="<?=Yii::$app->homeUrl?>site/search" method="get">
                 <div class="holder">
                     <div id="search-suggest" class="text-center">cateye</div>
                     <input type="text" name="search-kwd" id="search-kwd" class="text-center" placeholder="Search" />

@@ -329,8 +329,9 @@ $this->title = 'Mắt kính thời trang nữ';
                         <?php if ($muc->tag === "new"): ?>
                         <li class=" new ">
                         <div class="tag"><?php echo ucfirst($muc->tag); ?></div>
+                        <?php endif?>
                         <h2 class="h2 subtitle"><?php echo ucfirst($muc->tensp); ?></h2>
-                    <?php endif?>
+
                         <div class="price"><?php echo $muc->gia_don_trong . " VNĐ"; ?></div>
                 </li>
                     </ul>
@@ -340,6 +341,7 @@ $this->title = 'Mắt kính thời trang nữ';
             <?php endforeach;?>
         </ul>
     </div>
+</div>
 </div>
 <?php
 

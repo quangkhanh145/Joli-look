@@ -196,4 +196,16 @@ class SiteController extends Controller {
 		}
 		$this->goHome();
 	}
+	public function actionSearch() {
+		$request = Yii::$app->request;
+		$ten = $request->get("search-kwd");
+		$query = SanPham::find();
+		$query_2 = DanhMuc::find();
+		$ds_sanpham = $query->orderBy('id')->all();
+		$danhmuc = $query_2->orderBy('id')->where(['tensp' => $ten])->all();
+
+		return $this->render('search', [
+			'ds_sanpham' => $ds_sanpham,
+			'danhmuc' => $danhmuc]);
+	}
 }
