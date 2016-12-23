@@ -22,7 +22,7 @@ use yii\helpers\Html;
                 <div class="box bordered-box dark">
                     <!-- <form name="login-form" id="login-form" class="form" action="/user/login" method="POST"> -->
                     <?php
-$form = ActiveForm::begin(['method' => 'get', 'id' => 'login-form', 'options' => [
+$form = ActiveForm::begin(['id' => 'login-form', 'options' => [
 	'class' => 'form',
 	'name' => 'login-form'],
 	'fieldConfig' => [
