@@ -157,12 +157,12 @@ class SiteController extends Controller {
 	public function actionEyeglassesWomen() {
 		$query = SanPham::find();
 		$query_2 = DanhMuc::find();
-		$sanpham = $query->orderBy('id')
+		$ds_sanpham = $query->orderBy('id')
 			->all();
 		$danhmuc = $query_2->orderBy(['id' => SORT_DESC])
 			->limit(30)->all();
 		return $this->render('eyeglasses-women', [
-			'sanpham' => $sanpham,
+			'ds_sanpham' => $ds_sanpham,
 			'danhmuc' => $danhmuc]);
 	}
 	public function actionCreate() {
@@ -184,5 +184,16 @@ class SiteController extends Controller {
 			return $this->goHome();
 		}
 		return $this->render('myaccount');
+	}
+	public function actionProductDetails() {
+		$id = Yii::$app->request->get()['id'];
+		$sanpham = SanPham::findOne($id);
+		if ($sanpham) {
+			$danhmuc = DanhMuc::findOne($sanpham->id_danhmuc);
+			return $this->render('product-details', [
+				'sanpham' => $sanpham,
+				'danhmuc' => $danhmuc]);
+		}
+		$this->goHome();
 	}
 }

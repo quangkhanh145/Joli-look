@@ -302,16 +302,16 @@ $this->title = 'Mắt kính thời trang nữ';
             <a href="#catalog-listing" data-gridtype="grid-4-cols" class="grayed-out"><img src='<?=Yii::$app->homeUrl?>images/view-four-columns.svg' alt="Four columns" /></a>
         </div>
         <ul id="catalog-listing" class="grid products-list grid-2-cols nobullet">
-            <?php foreach ($danhmuc as $d): ?>
+            <?php foreach ($danhmuc as $muc): ?>
                 <li class="grid-item">
                 <div class="img">
                 <ul class="main-img">
-                <?php foreach ($sanpham as $sp): ?>
-                    <?php if ($sp->id_loai === $d->id): ?>
+                <?php foreach ($ds_sanpham as $sanpham): ?>
+                    <?php if ($sanpham->id_danhmuc === $muc->id): ?>
                         <li>
-                        <a href="/">
-                            <img src="<?=Yii::$app->homeUrl?><?php echo $sp->image; ?>" alt="<?php echo $sp->ten; ?>"
-                            title="<?php echo $sp->ten; ?>"/>
+                        <a href="<?=Yii::$app->homeUrl?>site/product-details<?php echo "?id=" . $sanpham->id; ?>">
+                            <img src="<?=Yii::$app->homeUrl?><?php echo $sanpham->image; ?>" alt="<?php echo $muc->tensp . " " . $sanpham->mau_sac; ?>"
+                            title="<?php echo $muc->tensp . " " . $sanpham->mau_sac; ?>"/>
                         </a>
                         </li>
                     <?php endif?>
@@ -322,14 +322,16 @@ $this->title = 'Mắt kính thời trang nữ';
                 <li>
                     <div class="displayGenderOptions">
                         <ul class="product-categories">
-                            <li><a class="button"><?php echo $d->gioi_tinh; ?></a></li>
+                            <li><a class="button"><?php echo $muc->gioi_tinh; ?></a></li>
                         </ul>
                     </div>
                     <ul class="product_details">
+                        <?php if ($muc->tag === "new"): ?>
                         <li class=" new ">
-                        <div class="tag">New</div>
-                        <h2 class="h2 subtitle"><?php echo ucfirst($d->tensp); ?></h2>
-                        <div class="price"><?php echo $d->gia_thamkhao . " VNĐ"; ?></div>
+                        <div class="tag"><?php echo ucfirst($muc->tag); ?></div>
+                        <h2 class="h2 subtitle"><?php echo ucfirst($muc->tensp); ?></h2>
+                    <?php endif?>
+                        <div class="price"><?php echo $muc->gia_don_trong . " VNĐ"; ?></div>
                 </li>
                     </ul>
                 </li>

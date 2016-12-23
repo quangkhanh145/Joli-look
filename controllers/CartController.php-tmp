@@ -1,0 +1,36 @@
+<?php
+namespace app\controllers;
+use app\models\cart;
+use Yii;
+use yii\web\Controller;
+
+class CartController extends Controller {
+	public function actionAddcart() {
+
+		$request = Yii::$app->request;
+		if ($request->isAjax) {
+			$lens = $request->post("lens");
+			$id   = $request->post("id");
+			$cart = new Cart();
+			if ($cart->add($id, $lens) === true) {
+				/*$data = ['success' => true, 'count' => $cart->count()];*/
+				//var_dump($cart->$cart);
+				$data = ['success' => true];
+			}
+			$data = ['success' => false];
+		}
+		//$data = ['success' => 'hihi'];
+		\Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+		return $data;
+	}
+	public function actionRemove($id) {
+
+	}
+	public function actionUpdate() {
+
+	}
+	public function actionOrder() {
+
+	}
+}
+?>

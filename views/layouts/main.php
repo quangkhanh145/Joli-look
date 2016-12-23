@@ -3,9 +3,10 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
+use app\models\cart;
 use yii\helpers\Html;
 use yii\helpers\Url;
-
+$cart = new Cart();
 ?>
 <?php $this->beginPage()?>
 <!DOCTYPE html>
@@ -16,12 +17,12 @@ use yii\helpers\Url;
     <title><?=Html::encode($this->title)?></title>
     <link href="icon.png" data-menuid="shortcut icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sacramento" type="text/css">
-    <?=Html::cssFile(Url::to(['css/index.css']))?>
-    <?=Html::cssFile(Url::to(['css/slick.css']))?>
+    <?=Html::cssFile(Url::to(['css/main.css']))?>
     <?=Html::jsFile(Url::to(['js/jquery-3.1.1.js']))?>
     <?=Html::jsFile(Url::to(['js/jquery.customSelect.min.js']))?>
     <?=Html::jsFile(Url::to(['js/slick.js']))?>
     <?=Html::jsFile(Url::to(['js/menu.js']))?>
+    <?=Html::jsFile(Url::to(['js/cart.js']))?>
     <?php $this->head()?>
 </head>
 <body>
@@ -31,7 +32,8 @@ use yii\helpers\Url;
         <div class="header-holder mobile-only">
           <a href="#bag-items" class="bag-icon js-slide">
           <?=Html::img(Url::to(['images/icon-bag.svg']), ['alt' => 'Open bag'])?>
-          <span class="bag_number_of_items">0</span></a>
+          <span class="bag_number_of_items"><?php $count = $cart->count();
+echo $count;?></span></a>
           <a href="#menu-categories" id="open-menu" class="menu-icon js-slide">
             <?=Html::img(Url::to(['images/icon-menu.svg']), ['alt' => 'Open menu'])?>
           </a>
@@ -304,16 +306,14 @@ if (Yii::$app->user->isGuest) {
   </li>');
 }
 ?>
-    <!-- <li data-menutitle="Login">
-      <a href="<?=Yii::$app->homeUrl?>site/user">Login</a>
-  </li> -->
   <li data-menutitle="My bag" class="bag">
       <a id="cart-desktop_link" href="#bag-items" class="js-slide">
         <span class="invisible">My bag</span>
         <div class="bag-icon">
           <img src="<?=Yii::$app->homeUrl?>images/icon-bag.svg" class="mobile-only" alt="Open bag" />
           <img src="<?=Yii::$app->homeUrl?>images/icon-bag.png" class="mobile-hide" alt="Open bag" />
-          <span class="bag_number_of_items">0</span>
+          <span class="bag_number_of_items"><?php $count = $cart->count();
+echo $count;?></span>
       </div>
   </a>
 </li>
@@ -332,7 +332,33 @@ if (Yii::$app->user->isGuest) {
                 <ul><li><a class="subtitle-italic support-email" href="mailto:support@Jolilook.com"><em><span>support@Jolilook.com</span></em></a></li></ul>
             </div>
             <ul class="list-items">
-                <li class="cart-notification">
+                <?php
+$listcart = $cart->getCart();
+if ($listcart):
+	foreach ($listcart as $item):
+	?>
+										                <li>
+										                  <a href="#">
+						                          <img src="<?=Yii::$app->homeUrl?><?php echo $item['image']; ?>" class="cart-preview"/>
+										                  </a>
+										                  <div class="cart-description">
+										                    <p>Sản phẩm<strong><?php echo $item['ten']; ?></strong></p>
+										                    <p>Màu sắc<strong><?php echo $item['mau']; ?></strong></p>
+										                    <p>Loại<strong><?php if ($item['loai_trong'] === "RX") {
+		echo "Đơn tròng";
+	} else {
+		echo "Đa tròng";
+	}
+	?></strong></p>
+										                    <p class="desktop-only"> Giá tiền <strong><?php echo $item['gia']; ?></strong></p>
+										                  </div>
+										                  <a href="#" class="bag-remove" data-id="<?php echo $item['id']; ?>" data-lens = "<?php echo $item['loai_trong']; ?>">
+										                    <img src="<?=Yii::$app->homeUrl?>images/icon-close.svg" alt="Close menu">
+										                  </a>
+										                </li>
+										              <?php endforeach;?>
+            <?php endif;?>
+                <li class="cart-notification" style="display: none">
                     <div class="cart-notification-text">
                                         Please note: If your order contains pre-order items, your order will only ship once all items become available.
                     </div>

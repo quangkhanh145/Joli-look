@@ -3,7 +3,9 @@
 namespace app\controllers;
 
 use app\models\ContactForm;
+use app\models\DanhMuc;
 use app\models\LoginForm;
+use app\models\SanPham;
 use app\models\SignupForm;
 use Yii;
 use yii\filters\AccessControl;
@@ -153,7 +155,15 @@ class SiteController extends Controller {
 			]);
 	}
 	public function actionEyeglassesWomen() {
-		return $this->render('eyeglasses-women');
+		$query      = SanPham::find();
+		$query_2    = DanhMuc::find();
+		$ds_sanpham = $query->orderBy('id')
+		                    ->all();
+		$danhmuc = $query_2->orderBy(['id' => SORT_DESC])
+		->limit(30)->all();
+		return $this->render('eyeglasses-women', [
+				'ds_sanpham' => $ds_sanpham,
+				'danhmuc'    => $danhmuc]);
 	}
 	public function actionCreate() {
 		$model             = new SignupForm();
@@ -174,5 +184,16 @@ class SiteController extends Controller {
 			return $this->goHome();
 		}
 		return $this->render('myaccount');
+	}
+	public function actionProductDetails() {
+		$id      = Yii::$app->request->get()['id'];
+		$sanpham = SanPham::findOne($id);
+		if ($sanpham) {
+			$danhmuc = DanhMuc::findOne($sanpham->id_danhmuc);
+			return $this->render('product-details', [
+					'sanpham' => $sanpham,
+					'danhmuc' => $danhmuc]);
+		}
+		$this->goHome();
 	}
 }

@@ -1,0 +1,39 @@
+.survey-content {
+    display: none;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    z-index: 1000000;
+    padding: 40px;
+    background-color: white;
+    border: 1px solid black;
+    max-width: 400px;
+}
+
+.survey-title {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    font-size: 22px;
+    margin: 0 0 10px 0;
+}
+
+.survey-button {
+    margin: 0 0 0 17%;
+}
+
+.x-button-close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+}
+
+.x-button-close > img {
+    width: 30px;
+    height: 30px;
+}
+
+.survey-text {
+    font-size: 17px;
+}

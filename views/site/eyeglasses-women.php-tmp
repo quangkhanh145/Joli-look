@@ -302,7 +302,53 @@ $this->title = 'Mắt kính thời trang nữ';
             <a href="#catalog-listing" data-gridtype="grid-4-cols" class="grayed-out"><img src='<?=Yii::$app->homeUrl?>images/view-four-columns.svg' alt="Four columns" /></a>
         </div>
         <ul id="catalog-listing" class="grid products-list grid-2-cols nobullet">
-
-        </ul>
+<?php foreach ($danhmuc as $muc):?>
+<li class="grid-item">
+                <div class="img">
+                <ul class="main-img">
+<?php foreach ($ds_sanpham as $sanpham):?>
+                    <?php if ($sanpham->id_danhmuc === $muc->id):?>
+                        <li>
+                        <a href="<?=Yii::$app->homeUrl?>site/product-details<?php echo "?id=".$sanpham->id;?>">
+                            <img src="<?=Yii::$app->homeUrl?><?php echo $sanpham->image;?>" alt="<?php echo $muc->tensp." ".$sanpham->style;?>"
+                            title="<?php echo $muc->tensp." ".$sanpham->style;?>"/>
+                        </a>
+                        </li>
+<?php endif?>
+                <?php endforeach;?>
+                </ul>
+                </div>
+                <ul class="infos">
+                <li>
+                    <div class="displayGenderOptions">
+                        <ul class="product-categories">
+                            <li><a class="button"><?php echo $muc->gioi_tinh;?></a></li>
+                        </ul>
+                    </div>
+                    <ul class="product_details">
+<?php if ($muc->tag === "new"):?>
+                        <li class=" new ">
+                        <div class="tag"><?php echo ucfirst($muc->tag);?></div>
+                        <h2 class="h2 subtitle"><?php echo ucfirst($muc->tensp);?></h2>
+<?php endif?>
+                        <div class="price"><?php echo $sanpham->gia_don_trong." VNĐ";?></div>
+                </li>
+                    </ul>
+                </li>
+                </ul>
+                </li>
+<?php endforeach;?>
+</ul>
     </div>
 </div>
+<?php
+
+/* @var $this \yii\web\View */
+/* @var $content string */
+
+use yii\helpers\Html;
+use yii\helpers\Url;
+
+?>
+<?=Html::jsFile(Url::to(['js/products.js']))?>
+<?=Html::jsFile(Url::to(['js/lazy_img_loader.js']))?>

@@ -11,13 +11,13 @@ window.products = {
                 return false;
             });
         });
-        /*window.products.adjustSectionBlock();
-        $('#product_details_block').on('click', '#addtocart', function(e)
+        /*window.products.adjustSectionBlock();*/
+        /*$('#product_details_block').on('click', '#addtocart', function(e)
             {
                 window.products.doAddToCart();
             });*/
         // show
-        /*$('#product_details_block').on('click', '#buyfrom', function(e) {
+        $('#product_details_block').on('click', '#buyfrom', function(e) {
             e.preventDefault();
             $('#choose-lenses').removeClass('hide');
             if( $('#choose-lenses input[type="radio"]:checked').length ){
@@ -31,13 +31,13 @@ window.products = {
                     }
                 }
             }
-        });*/
-        /*$('#product_details_block').on('click', '#choose-lenses .icon-remove', function(e) {
+        });
+        $('#product_details_block').on('click', '#choose-lenses .icon-remove', function(e) {
             $('#choose-lenses').addClass('hide');
             $('#addtocart').hide();
             $('#buyfrom').show();
-        });*/
-        /*$('#product_details_block').on('change', '#choose-lenses input[type="radio"]', function(){
+        });
+        $('#product_details_block').on('change', '#choose-lenses input[type="radio"]', function(){
             $('#addtocart').show();
             $('#buyfrom').hide();
 
@@ -51,13 +51,13 @@ window.products = {
                     $('.polarized-lenses-active').slideUp();
                 }
             }
-        });*/
+        });
         /*$('.swatches.nobullet li a').click(function() {
             var number = $(this).parent().index($(this).parent());
         });*/
-        /*$('body').on('click', '.preventDef', function(event) {
+        $('body').on('click', '.preventDef', function(event) {
             event.preventDefault();
-        });*/
+        });
         /*$('#product_details_block').on('click', '.wl-link', function(e){
             window.products.onWishlistLinkClick();
         });*/
@@ -292,6 +292,28 @@ window.products = {
             }
         });
     },
+    /*doAddToCart: function() {
+        var id = ;
+        var lensOPT = 'VT';
+
+        if ($("input[name='rx_type']:checked").length > 0) {
+
+            // User has selected an option
+            var rxOPT = $("input[name='rx_type']:checked").attr('value');
+            var sunOPT = 'NA';
+            if (rxOPT == "NORX") {
+                sunOPT = 'POL';
+            } else if (BL_FAMILY_INFO.is_sunglasses == true ) {
+                sunOPT = 'TINT';
+                if($("input[name='sun_type']:checked").length) {
+                    sunOPT = $("input[name='sun_type']:checked").attr('value');
+                }
+            }
+
+            window.cart.addToCart(id, lensOPT, rxOPT, sunOPT, genericLensTypeIdentifier);
+        }
+
+    },*/
 };
 $(document).ready(function(){
     window.products.init();
